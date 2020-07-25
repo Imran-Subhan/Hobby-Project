@@ -5,8 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arsenal_HomePage</title>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <style>
-        h1{font-size: 64px; background-color: red; color: white;  font-family: ;}
+        h1{font-size: 64px; background-color: red; color: white;  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;}
+        .topnav {
+        background-color: Red;
+        overflow: hidden;
+        }
+        .topnav a {
+        float: left;
+        display: block;
+        color: White;
+        text-align: center ;
+        padding: 10px 80px;
+        text-decoration: none;
+        font-size: 30px;
+        }
+        .topnav a.active {
+        background-color:red;
+        color: navy;
+        }
+        .topnav a:hover {
+        background-color: maroon ;
+        }
+
 
 
     </style>
@@ -15,8 +38,20 @@
 <body>
     
         <center>
-    <h1><strong>ARSENAL STATS</strong></h1>
+    <h1>ARSENAL STATS</h1>
         </center>
+       
+        <div class="topnav" id="myTopnav">
+            <a href="#home" class="active">Home</a>
+            <a href="#news">Create</a>
+            <a href="#contact">Stats1</a>
+            <a href="#about">Stats2</a>
+            <a href="#about">Stats3</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+              <i class="fa fa-bars"></i>
+            </a>
+          </div>
+
     
 </body>
 </html>
