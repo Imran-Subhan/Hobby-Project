@@ -2,14 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Arsenal_HomePage</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+            crossorigin="anonymous">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <style>
         body{
-            background-color: rgba(236, 236, 245, 0.897);
+            background-color: #f6f6f6;
         }
         h1{font-size: 64px; background-color: red; color: white;  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;}
         .topnav {
@@ -32,11 +35,20 @@
         color: navy;
         }
         .topnav a:hover {
-        background-color: maroon ;
+        background-color: rgb(219, 1, 1) ;
         }
+        
 
 
-
+        .wireframe {
+            border:2px solid green;
+        }
+        .row {
+            border: 1px solid blue;
+        }
+        .mycol{
+            border: 1px solid yellow;
+        }
     </style>
 
 </head>
@@ -46,18 +58,160 @@
     <h1>ARSENAL STATS</h1>
         </center>
        
-        <div class="topnav" id="myTopnav">
-            <a href= "Home.html" class="active">Home</a>
-            <a class="topnav-brand" href="Create.html">Create</a>
-            <a class="topnav-brand" href="Stats1.html">Stats1</a>
-            <a class="topnav-brand" href="Stats2.html">Stats2</a>
-            <a class="topnav-brand" href="Stats3.html">Stats3</a>
-            <a class="topnav-brand" href="Stats4.html">Stats4</a>
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-              <i class="fa fa-bars"></i>
-            </a>
+        <nav class="topnav" id="myTopnav">
+                <a href= "Home.html" class="active">Home</a>
+                <a class="topnav-brand" href="Create.html">Create</a>
+                <a class="topnav-brand" href="Stats1.html">Stats1</a>
+                <a class="topnav-brand" href="Stats2.html">Stats2</a>
+                <a class="topnav-brand" href="Stats3.html">Stats3</a>
+                <a class="topnav-brand" href="Stats4.html">Stats4</a>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+                </a>
+        </nav>
           </div>
+        <div class="container wireframe">
+            <div class="row justify-content-center myrow">
+                <div class="col-sm">
+                    <center><h2>Welcome to Arsenal Stats Hompage</h2></center>
+                </div>
+            </div>
+            <div class="row rowb">
+                <div class="col-12">
+                    <div class="btn-group">
+                        <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Arsenal Players
+                        </button>                   
+                        <div class="dropdown-menu">
+                        <button class="dropdown-item" href="#">Action</button>
+                        <button class="dropdown-item" href="#">Another action</button>
+                        <button class="dropdown-item" href="#">Something else here</button>
+                </div>
+            </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+            <div class="row rowc">
+                <div class="col-12">
+                    <a>Aubameyang</a>
+                    <br>
+                    <br>
+                <img src="/Project-images/Aubameyang-removebg-preview.png" alt="Aubameyang image" width="300" height="200">
+                </div>
+            </div>
+            <br>
 
-    
+            <div class="row rowd">
+                <div class="col-sm">
+                    <a>lacazette</a>
+                    <br>
+                    <br>
+                <img src="/Project-images/lacazette-removebg-preview.png" alt="lacazette image" width="200" height="200">
+                </div>
+            </div>
+            
+            <br>
+
+            <div class="row rowe">
+                <div class="col-sm">
+                    <a>Pepe</a>
+                    <br>
+                    <br>
+                <img src="/Project-images/Pepe-removebg-preview.png" alt="Pepe image" width="200" height="200">
+                </div>
+            </div>
+
+            <br>
+
+            <div class="row rowf">
+                <div class="col-sm">
+                    <a>Ozil</a>
+                    <br>
+                    <br>
+                <img src="/Project-images/ozil-removebg-preview.png" alt="Ozil image" width="300" height="250">
+                </div>
+            </div>
+            <br>
+
+            <div class="row rowg">
+                <div class="col-sm">
+                    <a>Torriera</a>
+                    <br>
+                    <br>
+                <img src="/Project-images/Torreira-removebg-preview.png" alt="Torriera image" width="300" height="250">
+                </div>
+            </div>
+            <br>
+
+            <div class="row rowh">
+                <div class="col-sm">
+                    <a>Xhaka</a>
+                    <br>
+                    <br>
+                <img src="/Project-images/Xhaka-removebg-preview.png" alt="Xhaka image" width="450" height="300">
+                </div>
+            </div>
+                <br>
+
+            <div class="row rowi">
+                <div class="col-sm">
+                    <a>Martinelli</a>
+                    <br>
+                    <br>
+                <img src="/Project-images/Martinelli-removebg-preview.png" alt="Martinelli image" width="250" height="250">
+                </div>
+            </div>
+            <br>
+            <div class="row rowj">
+                <div class="col-sm">
+                    <a>Guendouzi</a>
+                    <br>
+                    <br>
+                <img src="/Project-images/Guendouzi-removebg-preview.png" alt="Guendouzi image" width="350" height="350">
+                </div>
+            </div>
+
+            <br>
+            <div class="row rowj">
+                <div class="col-sm">
+                    <a>Saka</a>
+                    <br>
+                    <br>
+                <img src="/Project-images/Saka-removebg-preview.png" alt="Saka image" width="250" height="300">
+                </div>
+            </div>
+            <br>
+            <div class="row rowj">
+                <div class="col-sm">
+                    <a>Bellerin</a>
+                    <br>
+                    <br>
+                <img src="/Project-images/Hector-Bellerin-936189-removebg-preview.png" alt="Bellerin image" width="250" height="300">
+                </div>
+            </div>
+            <br>
+            <div class="row rowj">
+                <div class="col-sm">
+                    <a>Tierney</a>
+                    <br>
+                    <br>
+                <img src="/Project-images/Tierneyd-removebg-preview.png" alt="Tierney image" width="380" height="300">
+                </div>
+            </div>
+
+
+        </div>
+            
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" 
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" 
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" 
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
 </body>
 </html>
