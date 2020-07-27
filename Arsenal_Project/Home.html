@@ -21,7 +21,35 @@
         font-family:Arial, Helvetica, sans-serif;
         font-weight: bold;
         }
-        .topnav a {
+        nav a{
+            float: left;
+        display: block;
+        color: White;
+        text-align: center ;
+        padding: 10px 65px;
+        text-decoration: none;
+        font-size: 30px;
+        }
+        nav a.active {
+            background-color:red;
+        color: navy;
+
+
+        }
+        nav ul li {
+            list-style: none;
+            position: relative;
+        }
+        nav ul li a {
+            display:block;
+        }
+        nav ul li ul {
+            display:block;
+            position:absolute;
+        }
+        
+
+        /* .topnav a {
         float: left;
         display: block;
         color: White;
@@ -33,9 +61,10 @@
         .topnav a.active {
         background-color:red;
         color: navy;
-        }
-        .topnav a:hover {
+        } */
+        nav a:hover {
         background-color: rgb(219, 1, 1) ;
+        text-decoration: none;
         }
         
 
@@ -59,14 +88,21 @@
         </center>
        
         <nav class="topnav" id="myTopnav">
-                <a href= "Home.html" class="active">Home</a>
-                <a class="topnav-brand" href="Create.html">Create</a>
-                <a class="topnav-brand" href="Stats1.html">Stats1</a>
-                <a class="topnav-brand" href="Stats2.html">Stats2</a>
-                <a class="topnav-brand" href="Stats3.html">Stats3</a>
-                <a class="topnav-brand" href="Stats4.html">Stats4</a>
-                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                <i class="fa fa-bars"></i>
+            <ul>
+                
+                <li><a href= "Home.html" class="active">Home</a></li>
+                <li><a href="Create.html">Create</a></li>
+                <li><a>G.O.A.T</a>
+                    <ul>
+                        <li><a href="GOATFWS.html">G.O.A.T Forwards</a></li>
+                        <li><a href="GOATMIDS.html">Mds</a></li>
+                        <li><a href="GOATDEFS.html">Dfs</a></li>
+                        <li><a href="GOATGKS.html">Gks</a></li>
+                    </ul>
+                </li>
+                
+                <li><a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <li><i class="fa fa-bars"></i>
                 </a>
         </nav>
           </div>
@@ -200,6 +236,47 @@
                 <img src="/Project-images/Tierneyd-removebg-preview.png" alt="Tierney image" width="380" height="300">
                 </div>
             </div>
+            <br>
+            <div class="row rowk">
+                <div class="col-sm">
+                    <a>Mustafi</a>
+                    <br>
+                    <br>
+                <img src="/Project-images/Mustafi-removebg-preview.png" alt="Mustafi image" width="300" height="300">
+                </div>
+            </div>
+            <br>
+            <div class="row rowl">
+                <div class="col-sm">
+                    <a>Luiz</a>
+                    <br>
+                    <br>
+                <img src="/Project-images/David_luiz-removebg-preview.png" alt="Luiz image" width="300" height="300">
+                </div>
+            </div>
+                <br>
+            <div class="row rowm">
+                <div class="col-sm">
+                    <a>Leno</a>
+                    <br>
+                    <br>
+                <img src="/Project-images/Leno-removebg-preview.png" alt="Leno image" width="280" height="250">
+                </div>
+            </div>
+            <br>
+            <div class="row rowl">
+                <div class="col-sm">
+                    <a>Martinez</a>
+                    <br>
+                    <br>
+                <img src="/Project-images/martinez-removebg-preview.png" alt="Martinez image" width="300" height="300">
+                </div>
+            </div>
+
+
+            </div>
+
+
 
 
         </div>
