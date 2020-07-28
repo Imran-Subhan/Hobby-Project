@@ -15,25 +15,25 @@
             background-color: #f6f6f6;
         }
         h1{font-size: 64px; background-color: red; color: white;  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;}
-        .topnav {
+        nav {
         background-color: Red;
-        overflow: hidden;
         font-family:Arial, Helvetica, sans-serif;
         font-weight: bold;
         }
-        nav a{
+
+
+        /* nav a{
             float: left;
         display: block;
         color: White;
         text-align: center ;
-        padding: 10px 65px;
+        padding: 10px 50px;
         text-decoration: none;
         font-size: 30px;
         }
         nav a.active {
             background-color:red;
         color: navy;
-
 
         }
         nav ul li {
@@ -46,7 +46,7 @@
         nav ul li ul {
             display:block;
             position:absolute;
-        }
+        } */
         
 
         /* .topnav a {
@@ -62,10 +62,10 @@
         background-color:red;
         color: navy;
         } */
-        nav a:hover {
+        /* nav a:hover {
         background-color: rgb(219, 1, 1) ;
         text-decoration: none;
-        }
+        } */
         
 
 
@@ -86,25 +86,54 @@
         <center>
     <h1>ARSENAL STATS</h1>
         </center>
+
+        <nav class="navbar navbar-expand-md navbar-dark bg dark">
+            <a class="navbar-brand" href="#">Logo</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav md-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="Home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Create.html">Create</a>
+                        </li>
+                    <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+                            role="button" data-toggle="dropdown">G.O.A.T Players</a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class ="dropdown-item" href="GOATFWS.html"> Forwards</a>
+                                <a class ="dropdown-item" href="GOATMIDS.html"> Midfielders</a>
+                                <a class ="dropdown-item" href="GOATDEFS.html"> Defenders</a>
+                                <a class ="dropdown-item" href="GOATGKS.html"> Goalkeepers</a>
+                            </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">contact us</a>
+                    </li>
+                </ul>
+            </div>
+        
+        </nav>
        
-        <nav class="topnav" id="myTopnav">
+        <!-- <nav class="topnav" id="myTopnav">
             <ul>
                 
                 <li><a href= "Home.html" class="active">Home</a></li>
                 <li><a href="Create.html">Create</a></li>
-                <li><a>G.O.A.T</a>
-                    <ul>
-                        <li><a href="GOATFWS.html">G.O.A.T Forwards</a></li>
-                        <li><a href="GOATMIDS.html">Mds</a></li>
-                        <li><a href="GOATDEFS.html">Dfs</a></li>
-                        <li><a href="GOATGKS.html">Gks</a></li>
+                <li><a href="GOATFWS.html">G.O.A.T <br> Forwards</a></li>
+                <li><a href="GOATMIDS.html">G.O.A.T <br> Midfielders</a></li>
+                <li><a href="GOATDEFS.html">G.O.A.T <br> Defenders</a></li>
+                <li><a href="GOATGKS.html">G.O.A.T <br> Goalkeepers</a></li>
                     </ul>
-                </li>
-                
                 <li><a href="javascript:void(0);" class="icon" onclick="myFunction()">
                 <li><i class="fa fa-bars"></i>
                 </a>
-        </nav>
+        </nav> -->
           </div>
         <div class="container wireframe">
             <div class="row justify-content-center myrow">
