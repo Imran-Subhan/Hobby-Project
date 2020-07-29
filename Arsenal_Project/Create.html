@@ -2,73 +2,125 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Starting XI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Arsenal_Create</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
-    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-    crossorigin="anonymous">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+            crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<style>
-body{
-    background-color: #f6f6f6;
-}
-h1{font-size: 64px; background-color: red; color: white;  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;}
-.topnav {
-background-color: Red;
-overflow: hidden;
-font-family:Arial, Helvetica, sans-serif;
-font-weight: bold;
-}
-.topnav a {
-float: left;
-display: block;
-color: White;
-text-align: center ;
-padding: 10px 65px;
-text-decoration: none;
-font-size: 30px;
-}
-.topnav a.active {
-background-color:red;
-color: navy;
-}
-.topnav a:hover {
-background-color: rgb(219, 1, 1) ;
-}
+    <style>
+        body{
+            background-color: #f6f6f6;
+        }
+        h1{font-size: 64px; background-color: red; color: white;  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;}
+        nav {
+        background-color: Red;
+        font-family:Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        }
 
 
+        /* nav a{
+            float: left;
+        display: block;
+        color: White;
+        text-align: center ;
+        padding: 10px 50px;
+        text-decoration: none;
+        font-size: 30px;
+        }
+        nav a.active {
+            background-color:red;
+        color: navy;
 
-.wireframe {
-    border:2px solid green;
-}
-.row {
-    border: 1px solid blue;
-}
-.mycol{
-    border: 1px solid yellow;
-}
-</style>
+        }
+        nav ul li {
+            list-style: none;
+            position: relative;
+        }
+        nav ul li a {
+            display:block;
+        }
+        nav ul li ul {
+            display:block;
+            position:absolute;
+        } */
+        
+
+        /* .topnav a {
+        float: left;
+        display: block;
+        color: White;
+        text-align: center ;
+        padding: 10px 65px;
+        text-decoration: none;
+        font-size: 30px;
+        }
+        .topnav a.active {
+        background-color:red;
+        color: navy;
+        } */
+        /* nav a:hover {
+        background-color: rgb(219, 1, 1) ;
+        text-decoration: none;
+        } */
+        
+
+
+        .wireframe {
+            border:2px solid green;
+        }
+        .row {
+            border: 1px solid blue;
+        }
+        .mycol{
+            border: 1px solid yellow;
+        }
+    </style>
 
 </head>
 <body>
 
-<center>
-<h1>ARSENAL STATS</h1>
-</center>
+        <center>
+    <h1>ARSENAL STATS</h1>
+        </center>
 
-<nav class="topnav" id="myTopnav">
-        <a class="topnav-brand" href= "Home.html" >Home</a>
-        <a class="active" href="Create.html">Create</a>
-        <a class="topnav-brand" href="GOATFWS.html">Fws</a>
-        <a class="topnav-brand" href="GOATMIDS.html">Mds</a>
-        <a class="topnav-brand" href="GOATDEFS.html">Dfs</a>
-        <a class="topnav-brand" href="GOATGKS.html">Gks</a>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-        <i class="fa fa-bars"></i>
-        </a>
-</nav>
+        <nav class="navbar navbar-expand-md navbar-dark bg dark">
+            <a class="navbar-brand" href="#">Logo</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav md-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="Home.html">Home</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="Create.html">Create</a>
+                        </li>
+                    <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+                            role="button" data-toggle="dropdown">G.O.A.T Players</a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class ="dropdown-item" href="GOATFWS.html"> Forwards</a>
+                                <a class ="dropdown-item" href="GOATMIDS.html"> Midfielders</a>
+                                <a class ="dropdown-item" href="GOATDEFS.html"> Defenders</a>
+                                <a class ="dropdown-item" href="GOATGKS.html"> Goalkeepers</a>
+                            </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">contact us</a>
+                    </li>
+                </ul>
+            </div>
+        
+        </nav>
   </div>
 </body>
+
+<h2>The Creation Page</h2>
 </html>
