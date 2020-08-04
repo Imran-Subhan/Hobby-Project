@@ -1,0 +1,5 @@
+package com.qa.hwa.Controller;
+
+public @interface CrossOrigin {
+
+}
