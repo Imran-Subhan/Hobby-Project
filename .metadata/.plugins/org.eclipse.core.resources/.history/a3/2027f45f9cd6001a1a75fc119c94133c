@@ -1,0 +1,13 @@
+package com.qa.hwa_login.config;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.
+@Configuration
+public class PasswordBcrypt {
+	
+	@Bean
+	public BCryptPasswordEncoder passwordEncoder() {
+
+}
+}
