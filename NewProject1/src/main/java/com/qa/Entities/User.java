@@ -24,6 +24,9 @@ public class User {
 	private String password;
 	
 	
+	//===============
+	/// Constructor	
+	//===============
 
 	public User() {
 		super();
@@ -36,7 +39,9 @@ public class User {
 		this.username = username;
 		this.password = password;
 	}
-
+	//===============
+	/// Methods
+	//===============
 
 	public int getUserid() {
 		return userid;

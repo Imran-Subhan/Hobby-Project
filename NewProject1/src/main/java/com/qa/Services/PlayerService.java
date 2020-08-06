@@ -15,8 +15,6 @@ public class PlayerService {
 	@Autowired
 	PlayerRepo repo;
 	
-//	@Autowired
-//	createplayerRepo createrepo;
 	
 	public String newPlayer(Player p) {
 		String message ="Player added";
@@ -24,10 +22,6 @@ public class PlayerService {
 		return message;
 	}
 	
-//	public String showStat(createplayer c) {
-//		createrepo.existsById(c);
-//		return "Attack added ";
-//	}
 	public List<Player> ShowallPlayers(){
 		return repo.findAll();
 	}

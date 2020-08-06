@@ -20,18 +20,14 @@ public class PController {
 	@Autowired
 	PlayerService service;
 	
-	@GetMapping ("/") 
-	public String home() {
-
-		return "service.newPlayer(p)";
-		
+	@PostMapping ("/AddPlayer") 
+	public String Addplayer(@RequestBody Player p) {
+	return "service.newPlayer(p)";
 	}
 	
-	@GetMapping ("/one") 
-	public String newPlayer() {
-		System.out.println("works");
-		
-		return "service.newPlayer(p)";
+	@GetMapping ("/ShowPlayers") 
+	public List<Player> ShowAllPlayers() {
+		return service.ShowallPlayers();
 		
 	}
 	
