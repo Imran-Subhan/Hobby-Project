@@ -1,4 +1,4 @@
-package com.qa.hwa_login.UserEntity;
+package com.qa.Entities;
 
 import javax.annotation.Generated;
 import javax.persistence.Column;
@@ -6,7 +6,6 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import net.bytebuddy.asm.Advice.This;
 
 @Entity
 @Table(name = "users")
@@ -22,6 +21,13 @@ public class User {
 	
 	@Column (name = "password")
 	private String password;
+	
+	
+
+	public User() {
+		super();
+	}
+
 
 	public User(int userid, String username, String password) {
 		super();

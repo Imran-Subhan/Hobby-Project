@@ -1,4 +1,4 @@
-package com.qa.hwa.Controller;
+package com.example.demo.Controllers;
 
 import java.util.List;
 
