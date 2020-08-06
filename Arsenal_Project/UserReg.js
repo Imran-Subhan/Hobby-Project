@@ -1,8 +1,9 @@
 function AddUser() {
-    let UseenameInp = document.getElementById("UsernameInp").value;
+    let UsernameInp = document.getElementById("UsernameInp").value;
     let PasswordInp = document.getElementById("PasswordInp").value;
 
-
+console.log(UsernameInp)
+console.log(PasswordInp)
 
 
     fetch(`http://localhost:9001/AddUser`, {
@@ -11,7 +12,7 @@ function AddUser() {
             "Content-Type": "application/json"
         },
         body: JSON.stringify({
-            username: UseenameInp,
+            username: UsernameInp,
             password: PasswordInp,
         })
       })
