@@ -1,4 +1,4 @@
-package com.qa.hwa.PlayerEntity;
+package com.qa.Entities;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -7,6 +7,13 @@ import javax.persistence.Id;
 public class Player {
 	
 	
+	public Player() {
+		super();
+	}
+	
+
+
+
 	@Id
 	private int playerno;
 	private String playername;

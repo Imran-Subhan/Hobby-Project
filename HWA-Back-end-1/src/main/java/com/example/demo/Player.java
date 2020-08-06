@@ -1,4 +1,4 @@
-package com.qa.hwa.PlayerEntity;
+package com.example.demo;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;

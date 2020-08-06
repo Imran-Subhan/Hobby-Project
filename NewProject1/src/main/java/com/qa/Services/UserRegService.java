@@ -1,15 +1,15 @@
-package com.qa.hwa_login.UserService;
+package com.qa.Services;
+
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.qa.hwa.login.UserregRepo.UserRegRepo;
-import com.qa.hwa_login.UserEntity.User;
+import com.qa.Entities.User;
+import com.qa.Repositories.UserRegRepo;
 
 @Service
-public class UserRegService {
-	
-	
+public class UserRegService {	
 
 	@Autowired
 	UserRegRepo Urepo;
@@ -20,9 +20,8 @@ public class UserRegService {
 		return message;
 		
 	}
-	public String ShowUsers(User user) {
-		String message = "User Table";
-		Urepo.getOne(1);
-		return message;
+	public List<User> ShowUsers(User user) {
+		
+		return Urepo.findAll();
 	}
 }
