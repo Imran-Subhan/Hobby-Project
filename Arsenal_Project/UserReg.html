@@ -9,7 +9,7 @@
     crossorigin="anonymous">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+<Script src="UserReg.js"></Script>
 <style>
 body{
     background-color: #f6f6f6;
@@ -102,14 +102,14 @@ background-color: rgb(219, 1, 1) ;
     <div class="form-row">
       <div class="col-md-6 mb-3">
         <label for="validationServer01">Create a Username</label>
-        <input type="text" class="form-control is-valid" id="validationServer01" placeholder="Username" required>
+        <input type="text" class="form-control is-valid" id="UsernameInp" placeholder="Username" required>
         <div class="valid-feedback">
           Looks good!
         </div>
       </div>
       <div class="col-md-6 mb-3">
         <label for="validationServer02">Create a Password</label>
-        <input type="text" class="form-control is-valid" id="validationServer02" placeholder="Password" required>
+        <input type="text" class="form-control is-valid" id="PasswordInp" placeholder="Password" required>
         <div class="valid-feedback">
           Looks good!
         </div>
@@ -127,6 +127,6 @@ background-color: rgb(219, 1, 1) ;
         </div>
       </div>
     </div>
-    <button class="btn btn-primary" type="submit">Submit form</button>
+    <button class="btn btn-primary" onclick="AddUser()" type="submit">Submit form</button>
   </form>
 </html>
