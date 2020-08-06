@@ -5,6 +5,8 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import net.bytebuddy.asm.Advice.This;
+
 @Entity
 @Table(name = "users")
 public class User {
@@ -18,6 +20,14 @@ public class User {
 	
 	@Column (name = "password")
 	private String password;
+
+	public User(int userid, String username, String password) {
+		super();
+		this.userid = userid;
+		this.username = username;
+		this.password = password;
+	}
+
 
 	public int getUserid() {
 		return userid;
@@ -41,6 +51,12 @@ public class User {
 
 	public void setPassword(String password) {
 		this.password = password;
+	}
+
+
+	@Override
+	public String toString() {
+		return "User [userid=" + userid + ", username=" + username + ", password=" + password + "]";
 	}
 	
 	

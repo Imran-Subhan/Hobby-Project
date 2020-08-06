@@ -3,13 +3,13 @@ package com.qa.hwa_login.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.qa.hwa_login.UserRepo.UserRepo;
+import com.qa.hwa.login.UserregRepo.UserRegRepo;
 
 @Service
-public class UserService {
+public class UserRegService {
 
 	@Autowired
-	UserRepo Urepo;
+	UserRegRepo Urepo;
 	
 	
 }
