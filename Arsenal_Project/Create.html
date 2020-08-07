@@ -20,7 +20,8 @@ form {
 #PlayerList:hover {
   background-color: rgb(5, 51, 53);
 }
-
+.dropdown-menu a dropdown-item:hover {background-color: gray
+}
     </style>
 
 </head>
@@ -67,29 +68,25 @@ form {
   <h2>The Creation Page</h2>
   <form>
     <div class ="form-group row">
-      <label for="inputPlayername" class="col-sm col-form-label">Select a player</label>
-            <div class="btn-group">
-                <button class="btn btn-secondary btn-md dropdown-toggle" id="PlayerList" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Arsenal Players
-                </button>                   
-                <div class="dropdown-menu">
-                <a class="dropdown-item" href="#Aubameyang">Aubameyang</a>
-                <a class="dropdown-item" href="#Lacazette">Lacazette</a>
-                <a class="dropdown-item" href="#Pepe">Pepe</a>
-                <a class="dropdown-item" href="#Ozil">Ozil</a>
-                <a class="dropdown-item" href="#Torreira">Torreira</a>
-                <a class="dropdown-item" href="#Xhaka">Xhaka</a>
-                <a class="dropdown-item" href="#Martinelli">Martinelli</a>
-                <a class="dropdown-item" href="#Guendouzi">Guendouzi</a>
-                <a class="dropdown-item" href="#Saka">Saka</a>
-                <a class="dropdown-item" href="#Bellerin">Bellerin</a>
-                <a class="dropdown-item" href="#Tierney">Tierney</a>
-                <a class="dropdown-item" href="#Mustafi">Mustafi</a>
-                <a class="dropdown-item" href="#Luiz">Luiz</a>
-                <a class="dropdown-item" href="#leno">leno</a>
-                <a class="dropdown-item" href="#Martinez">Martinez</a>
-                
-        </div>
+      <label for="inputPlayername" class="col-sm col-form-label">Select a player</label>        
+                <div select name = "dropdown">
+                  <select name = "dropdown">
+                    <option value = "Aubameyang" selected>Aubameyang</option>
+                    <option value = "Lacazette">Lacazette</option>
+                     <option value = "Pepe">Pepe</option>
+                    <option value = "Ozil">Ozil</option>
+                    <option value = "Torreira">Torreira</option>
+                    <option value = "Xhaka">Xhaka</option>
+                    <option value = "Martinelli">Martinelli</option>
+                    <option value = "Guendouzi">Guendouzi</option>
+                    <option value = "Saka">Saka</option>
+                    <option value = "Bellerin">Bellerin</option>
+                    <option value = "Tierney">Tierney</option>
+                    <option value = "Mustafi">Mustafi</option>
+                    <option value = "Luiz">Luiz</option>
+                    <option value = "leno">leno</option>
+                    <option value = "Martinez">Martinez</option>
+                  </select>       
     </div>
     </div>
     <div class="form-group row">
