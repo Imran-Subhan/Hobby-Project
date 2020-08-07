@@ -1,4 +1,8 @@
-function insertStats() {
+document.getElementById('inputPlayername').onchange = function() {
+    alert(this.value);
+  }
+
+function SaveStats() {
 let playername = document.getElementById("playername").value;
 let Attack = document.getElementById(Attack).value;
 

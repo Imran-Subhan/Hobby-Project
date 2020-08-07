@@ -9,78 +9,18 @@
             crossorigin="anonymous">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="StyleSheet" href="StyleSheet.css">
 
     <style>
-        body{
-            background-color: #f6f6f6;
-        }
-        h1{font-size: 64px; background-color: red; color: white;  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;}
-        nav {
-        background-color: Red;
-        font-family:Arial, Helvetica, sans-serif;
-        font-weight: bold;
-        }
-        form {
-            width: 30%
-        }
 
+form {
+            width: 30%;
+            margin: 100px;
+        }
+#PlayerList:hover {
+  background-color: rgb(5, 51, 53);
+}
 
-        /* nav a{
-            float: left;
-        display: block;
-        color: White;
-        text-align: center ;
-        padding: 10px 50px;
-        text-decoration: none;
-        font-size: 30px;
-        }
-        nav a.active {
-            background-color:red;
-        color: navy;
-
-        }
-        nav ul li {
-            list-style: none;
-            position: relative;
-        }
-        nav ul li a {
-            display:block;
-        }
-        nav ul li ul {
-            display:block;
-            position:absolute;
-        } */
-        
-
-        /* .topnav a {
-        float: left;
-        display: block;
-        color: White;
-        text-align: center ;
-        padding: 10px 65px;
-        text-decoration: none;
-        font-size: 30px;
-        }
-        .topnav a.active {
-        background-color:red;
-        color: navy;
-        } */
-        /* nav a:hover {
-        background-color: rgb(219, 1, 1) ;
-        text-decoration: none;
-        } */
-        
-
-
-        .wireframe {
-            border:2px solid green;
-        }
-        .row {
-            border: 1px solid blue;
-        }
-        .mycol{
-            border: 1px solid yellow;
-        }
     </style>
 
 </head>
@@ -126,19 +66,45 @@
   
   <h2>The Creation Page</h2>
   <form>
+    <div class ="form-group row">
+      <label for="inputPlayername" class="col-sm col-form-label">Select a player</label>
+            <div class="btn-group">
+                <button class="btn btn-secondary btn-md dropdown-toggle" id="PlayerList" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Arsenal Players
+                </button>                   
+                <div class="dropdown-menu">
+                <a class="dropdown-item" href="#Aubameyang">Aubameyang</a>
+                <a class="dropdown-item" href="#Lacazette">Lacazette</a>
+                <a class="dropdown-item" href="#Pepe">Pepe</a>
+                <a class="dropdown-item" href="#Ozil">Ozil</a>
+                <a class="dropdown-item" href="#Torreira">Torreira</a>
+                <a class="dropdown-item" href="#Xhaka">Xhaka</a>
+                <a class="dropdown-item" href="#Martinelli">Martinelli</a>
+                <a class="dropdown-item" href="#Guendouzi">Guendouzi</a>
+                <a class="dropdown-item" href="#Saka">Saka</a>
+                <a class="dropdown-item" href="#Bellerin">Bellerin</a>
+                <a class="dropdown-item" href="#Tierney">Tierney</a>
+                <a class="dropdown-item" href="#Mustafi">Mustafi</a>
+                <a class="dropdown-item" href="#Luiz">Luiz</a>
+                <a class="dropdown-item" href="#leno">leno</a>
+                <a class="dropdown-item" href="#Martinez">Martinez</a>
+                
+        </div>
+    </div>
+    </div>
     <div class="form-group row">
-      <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+      <label for="inputAttack" class="col-sm-2 col-form-label">Attack Stat</label>
       <div class="col-sm-10">
-        <input type="email" class="form-control" id="inputEmail3">
+        <input type="number" class="form-control" id="inputAttack">
       </div>
     </div>
     <div class="form-group row">
-      <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+      <label for="inputDefence" class="col-sm-2 col-form-label">Defence Stat</label>
       <div class="col-sm-10">
-        <input type="password" class="form-control" id="inputPassword3">
+        <input type="number" class="form-control" id="inputDefence">
       </div>
     </div>
-    <fieldset class="form-group">
+    <!-- <fieldset class="form-group">
       <div class="row">
         <legend class="col-form-label col-sm-2 pt-0">Radios</legend>
         <div class="col-sm-10">
@@ -162,8 +128,8 @@
           </div>
         </div>
       </div>
-    </fieldset>
-    <div class="form-group row">
+    </fieldset> -->
+    <!-- <div class="form-group row">
       <div class="col-sm-2">Checkbox</div>
       <div class="col-sm-10">
         <div class="form-check">
@@ -173,10 +139,10 @@
           </label>
         </div>
       </div>
-    </div>
+    </div> -->
     <div class="form-group row">
       <div class="col-sm-10">
-        <button type="submit" class="btn btn-primary">Sign in</button>
+        <button type="submit" onclick="SaveStats()" class="btn btn-primary">Save</button>
       </div>
     </div>
   </form>
