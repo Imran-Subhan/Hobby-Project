@@ -4,35 +4,38 @@ function getValue(selection) {
   }
 
 function SaveStats() {
-let inputPlayerno = document.getElementById("inputPlayerno").value;
-let inputAttack = document.getElementById("inputAttack").value;
-let inputDefence = document.getElementById("inputDefence").value;
+let Playerno = document.getElementById("inputPlayerno").value;
+let Attack = document.getElementById("inputAttack").value;
+let Defence = document.getElementById("inputDefence").value;
 var e = document.getElementById("choice");
-var struser = e.options[e.selectedIndex].value
-console.log(struser)
-console.log(inputPlayerno)
-console.log(inputAttack)
-console.log(inputDefence)
-}
+var playername = e.options[e.selectedIndex].value;
+console.log("player name = " + playername)
+console.log("player number = " + Playerno)
+console.log("player attack stat = " + Attack)
+console.log("player defence stat = " + Defence)
+
 fetch(`http://localhost:9001/AddPlayer`, {
-metod:"POST",
-headers: {
-    "content-Type": "application/json"
-},
-body: JSON.stringify({
-    playername: inputplayername,
-    playerno: inputPlayerno,
-    attack: inputAttack,
-    defence: inputDefence
-
-
-})
-
-}
+    method: "POST",
+    headers: {
+        "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+        playername: playername,
+        playerno: Playerno,
+        attack: Attack,
+        defence: Defence
+    
+    })
+  })
 .then(
 function(response) {
-    if (response.status !== 200)
-    console.log('looks like there was a problem Status Code: ' + response.status)
-    return;
-}))
-console.log("player added")
+if (response.status !== 200) {
+console.log('Looks like there was a problem. Status Code: ' +
+response.status);
+return;
+}
+
+
+    })
+
+}
