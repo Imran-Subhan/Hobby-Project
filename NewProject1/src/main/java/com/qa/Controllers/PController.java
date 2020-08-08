@@ -23,7 +23,7 @@ public class PController {
 	
 	@PostMapping ("/AddPlayer") 
 	public String Addplayer(@RequestBody Player p) {
-	return "service.newPlayer(p)";
+	return service.newPlayer(p);
 	}
 	
 	@GetMapping ("/ShowPlayers") 

@@ -1,17 +1,24 @@
 package com.qa.Entities;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table (name="players")
 public class Player {
 
 
 
 	@Id
+	@Column (name = "playerno")
 	private int playerno;
+	@Column (name = "playername")
 	private String playername;
+	@Column (name = "Attack")
 	private int Attack;
+	@Column (name = "Defence")
 	private int Defence;
 
 	//===============
@@ -20,12 +27,12 @@ public class Player {
 	public Player() {
 		super();
 	}
-	public Player(int playerno, String playername, int attack, int defence) {
+	public Player(int playerno, String playername, int Attack, int Defence) {
 		super();
 		this.playerno = playerno;
 		this.playername = playername;
-		Attack = attack;
-		Defence = defence;
+		this.Attack = Attack;
+		this.Defence = Defence;
 	}
 
 	//===============
@@ -43,17 +50,18 @@ public class Player {
 	public void setPlayername(String playername) {
 		this.playername = playername;
 	}
+
 	public int getAttack() {
 		return Attack;
 	}
-	public void setAttack(int attack) {
-		Attack = attack;
+	public void setAttack(int Attack) {
+		this.Attack = Attack;
 	}
 	public int getDefence() {
 		return Defence;
 	}
-	public void setDefence(int defence) {
-		Defence = defence;
+	public void setDefence(int Defence) {
+		this.Defence = Defence;
 	}
 	@Override
 	public String toString() {
