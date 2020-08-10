@@ -52,5 +52,12 @@ public class PlayerService {
 			return message;
 				
 			}
+		
+		public String updateaPlayer(Player p) {
+			String message ="Player updated";
+			repo.save(p);
+			return message;
+		}
+		
 		}
 			

@@ -22,7 +22,7 @@ public class Player {
 	private int Defence;
 
 	//===============
-	/// Constructor	
+	/// Constructors	
 	//===============
 	public Player() {
 		super();

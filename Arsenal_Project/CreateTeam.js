@@ -19,8 +19,10 @@ function getAll() {
             console.log(data[i].defence);
           
           
-          let string = '<tr><td>'+data[i].playername+'</td><td>'+data[i].playerno+'</td><td>'+data[i].attack+'</td><td>' 
-          + data[i].defence+'</td><td>' + '</td><td><button onclick = "DeletePlayer('+ data[i].playerno+')"class="btn btn-block btn-danger">Delete</button></td></tr>';
+          let string = '<tr id="player"><td>'+data[i].playername+'</td><td id="playerno">'+data[i].playerno+'</td><td>'+data[i].attack+'</td><td>' 
+          + data[i].defence+'</td><td align="right">' 
+          + '<button class="open-button" onclick="openForm()"" class= "btn btn-block">Update</button></td><td>'
+            + '<button type="button" onclick = "DeletePlayer('+ data[i].playerno+')"class="btn btn-block btn-danger">Delete</button></td></tr>';
          
           document.getElementById("tbody").innerHTML+=string;
         
@@ -46,3 +48,51 @@ function getAll() {
               console.log('Request failed', error);
             });
         }
+
+        function Update(id) {
+            console.log("upddddd");
+            let playername = document.getElementById("updplayername").value;
+            let playerno = document.getElementById("updplayerno").value;
+            let Attack = document.getElementById("updAttack").value;
+            let Defence = document.getElementById("updDefence").value;
+            // var Row = document.getElementById("tbody");
+            // var Cells = Row.getElementsByTagName("td");
+            // alert(Cells[1].innerHTML);
+            console.log(playername);
+            console.log(playerno);
+            console.log(Attack);
+            console.log(Defence);
+            fetch('http://localhost:9001/UpdatePlayer/'+playerno, {
+                method: 'Put',
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    playername: playername,
+                    playerno: playerno,
+                    attack: Attack,
+                    defence: Defence
+                
+                })
+              })
+            .then(
+            function(response) {
+                location.reload();
+            if (response.status !== 200) {
+            console.log('Looks like there was a problem. Status Code: ' +
+            response.status);
+            return;
+            }
+            
+            
+                })
+            
+            }
+          function openForm() {
+            document.getElementById("myForm").style.display = "block";
+          }
+          
+          function closeForm() {
+            document.getElementById("myForm").style.display = "none";
+          }
+        

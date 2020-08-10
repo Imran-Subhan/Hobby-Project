@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="StyleSheet" href="StyleSheet.css">
+    <link rel="StyleSheet" href= "StyleSheetCT.css">
 
     <style>
     </style>
@@ -67,6 +68,7 @@
         <th scope="col">Player Number</th>
         <th scope="col">Attack</th>
         <th scope="col">Defence</th>
+
       </tr>
     </thead>
     <tbody id="tbody">
@@ -74,7 +76,29 @@
     </tbody>
     
   </table>
+
   
+
+<div class="form-popup" id="myForm">
+  <form action="/action_page.php" class="form-container">
+    <h1>Update Stats</h1>
+
+    <label for="playername"> <b>Player Name</b></label>
+    <input type="text" id="updplayername" placeholder="Enter player name" name="Attack" required>
+
+    <label for="playerno"> <b>player number</b></label>
+    <input type="Number" id="updplayerno" placeholder="Enter player number" name="Attack" required>
+
+    <label for="Attack"> <b>Attack</b></label>
+    <input type="Number" id="updAttack" placeholder="Enter Attack Stat" name="Attack" required>
+
+    <label for="Defence"><b>Defence</b></label>
+    <input type="number" id="updDefence" placeholder="Enter Defence Stat" name="Defence" required>
+
+    <button type="submit" onclick="Update()" class="btn">Update</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
 
   <script src="CreateTeam.js"></script>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" 
