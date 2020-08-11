@@ -21,7 +21,7 @@ function getAll() {
           
           let string = '<tr id="player"><td>'+data[i].playername+'</td><td id="playerno">'+data[i].playerno+'</td><td>'+data[i].attack+'</td><td>' 
           + data[i].defence+'</td><td align="right">' 
-          + '<button class="open-button" onclick="openForm()"" class= "btn btn-block">Update</button></td><td>'
+          + '<button class="open-button" onclick="openForm('+ data[i].playerno+' )" class= "btn btn-block">Update</button></td><td>'
             + '<button type="button" onclick = "DeletePlayer('+ data[i].playerno+')"class="btn btn-block btn-danger">Delete</button></td></tr>';
          
           document.getElementById("tbody").innerHTML+=string;
@@ -88,8 +88,15 @@ function getAll() {
                 })
             
             }
-          function openForm() {
+          function openForm(playerno) {
             document.getElementById("myForm").style.display = "block";
+
+            var number = playerno;
+            console.log(number)
+            document.getElementById("updplayerno").value = number;
+            // var pname = name;
+            // console.log(pname)
+            // document.getElementById("updplayername").value = pname;
           }
           
           function closeForm() {
