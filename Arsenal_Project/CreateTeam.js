@@ -17,18 +17,31 @@ function getAll() {
             console.log(data[i].playerno);
             console.log(data[i].attack);
             console.log(data[i].defence);
-          
-          
+
+            //String2 is the button to open update form
+           let string2="<button type='button' class='btn btn-block btn-info' onclick=openForm("+data[i].playerno+",'"+data[i].playername+"',"+data[i].attack+","+data[i].defence+")> Update </button>"  
+           //adding string2 to string. string is data inserted into the tbody.
           let string = '<tr id="player"><td>'+data[i].playername+'</td><td id="playerno">'+data[i].playerno+'</td><td>'+data[i].attack+'</td><td>' 
           + data[i].defence+'</td><td align="right">' 
-          + '<button class="open-button" onclick="openForm('+ data[i].playerno+' )" class= "btn btn-block">Update</button></td><td>'
-            + '<button type="button" onclick = "DeletePlayer('+ data[i].playerno+')"class="btn btn-block btn-danger">Delete</button></td></tr>';
+          + string2
+          + '<button type="button" onclick = "DeletePlayer('+ data[i].playerno+')"class="btn btn-block btn-danger">Delete</button></td></tr>';
          
           document.getElementById("tbody").innerHTML+=string;
         
           }
           });
           })
+        }
+        function openForm(playerno,pname,attack,defence) {
+          //alert(playerno+".."+playername)
+          document.getElementById("myForm").style.display = "block";
+
+          var number = playerno;
+          console.log(number)
+          document.getElementById("updplayerno").value = number;
+          document.getElementById("updplayername").value = pname;
+          document.getElementById("updAttack").value = attack;
+          document.getElementById("updDefence").value = defence;
         }
 
         function DeletePlayer(id){
@@ -49,15 +62,13 @@ function getAll() {
             });
         }
 
-        function Update(id) {
+        function Update() {
             console.log("upddddd");
             let playername = document.getElementById("updplayername").value;
             let playerno = document.getElementById("updplayerno").value;
             let Attack = document.getElementById("updAttack").value;
             let Defence = document.getElementById("updDefence").value;
-            // var Row = document.getElementById("tbody");
-            // var Cells = Row.getElementsByTagName("td");
-            // alert(Cells[1].innerHTML);
+
             console.log(playername);
             console.log(playerno);
             console.log(Attack);
@@ -78,6 +89,7 @@ function getAll() {
             .then(
             function(response) {
                 location.reload();
+                console.log("Player updated")
             if (response.status !== 200) {
             console.log('Looks like there was a problem. Status Code: ' +
             response.status);
@@ -88,16 +100,7 @@ function getAll() {
                 })
             
             }
-          function openForm(playerno) {
-            document.getElementById("myForm").style.display = "block";
 
-            var number = playerno;
-            console.log(number)
-            document.getElementById("updplayerno").value = number;
-            // var pname = name;
-            // console.log(pname)
-            // document.getElementById("updplayername").value = pname;
-          }
           
           function closeForm() {
             document.getElementById("myForm").style.display = "none";
