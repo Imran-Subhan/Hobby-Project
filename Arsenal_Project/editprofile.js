@@ -1,5 +1,10 @@
-function login() {
-    fetch('http://localhost:9001/showUsers')
+window.onload(showProfile());
+
+let usersid = require('./login.js');
+console.log(usersid);
+
+function showProfile() {
+    fetch('http://localhost:9001/showProfile' + usersid,)
       .then(
       function(response) {
       if (response.status !== 200) {
@@ -8,29 +13,14 @@ function login() {
       return;
       }
       response.json().then(function(data) {
-          console.log(data);
-          for (let i =0; i<data.length; i++) {
-            // console.log("userid: " + data[i].userid);
-            // console.log("username: " +data[i].username);
-            // console.log("password: " +data[i].password);
+            alert(usersid);
+            console.log(data);
+            for (let i =0; i<data.length; i++) {
+            console.log("userid: " + data[i].userid);
+            console.log("username: " +data[i].username);
+            console.log("password: " +data[i].password);
             
-            if(document.getElementById("UsernameInp").value.includes(data[i].username) 
-            && document.getElementById("PasswordInp").value.includes(data[i].password)) {
-              
-            var usersid = data[i].userid;
-            console.log(usersid);
-
-            console.log("correct username & password");
-            window.location.href='editProfile.html';
             
-           
-                break;
-            
-            }
-            else {
-              alert("Invalid username or password");
-            }
-            module.exports = usersid;
 
         //     //String2 is the button to open update form
         //    let string2="<button type='button' class='btn btn-block btn-info' onclick=openForm("+data[i].playerno+",'"+data[i].playername+"',"+data[i].attack+","+data[i].defence+")> Update </button>"  

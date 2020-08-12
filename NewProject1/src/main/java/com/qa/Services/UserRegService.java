@@ -27,7 +27,12 @@ public class UserRegService {
 		return Urepo.findAll();
 	}
 	
-	public String DeletePlayer(int id) { 
+public User ShowProfile(int id) {
+		
+		return Urepo.findById(id).get();
+	}
+
+	public String DeleteUser(int id) { 
 		String message ="";
 		Optional<User> user = Urepo.findById(id);
 		if(user.isPresent()) {
@@ -39,7 +44,7 @@ public class UserRegService {
 	
 		return message;
 	}
-		public String UpdatePlayer(int id) {
+		public String UpdateUser(int id) {
 			String message ="";
 			Optional<User> user = Urepo.findById(id);
 			if(user.isPresent()) {

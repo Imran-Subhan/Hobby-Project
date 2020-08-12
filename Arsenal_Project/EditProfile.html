@@ -12,9 +12,7 @@
     <link rel="StyleSheet" href="StyleSheet.css">
 
     <style>
-     .form-row {
-         padding-top: 100px;
-     }  
+       
     </style>
    
 
@@ -36,15 +34,15 @@
     
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav md-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="login.html">Login</a>
-                    </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="Home.html">Home</a>
+                        <a class="nav-link" href="MemberHome.html">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="Create.html">Create</a>
                         </li>
+                    <li class="nav-item  active">
+                        <a class="nav-link" href="EditProfile.html">EditProfile</a>
+                    </li>
                     <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
                             role="button" data-toggle="dropdown">G.O.A.T Players</a>
@@ -62,55 +60,23 @@
             </div>
         
         </nav>
-       
-        <!-- <nav class="topnav" id="myTopnav">
-            <ul>
+
+        <table class="table table-dark">
+            <thead>
+              <tr>
+                <th scope="col">username</th>
+                <th scope="col">password</th>
                 
-                <li><a href= "Home.html" class="active">Home</a></li>
-                <li><a href="Create.html">Create</a></li>
-                <li><a href="GOATFWS.html">G.O.A.T <br> Forwards</a></li>
-                <li><a href="GOATMIDS.html">G.O.A.T <br> Midfielders</a></li>
-                <li><a href="GOATDEFS.html">G.O.A.T <br> Defenders</a></li>
-                <li><a href="GOATGKS.html">G.O.A.T <br> Goalkeepers</a></li>
-                    </ul>
-                <li><a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                <li><i class="fa fa-bars"></i>
-                </a>
-        </nav> -->
-          </div>
-        <div class="container wireframe">
-            <div class="row justify-content-center myrow">
-                <div class="col-sm">
-                    <center><h2>Login</h2></center>
-                </div>
-            </div>
-            <form>
-                <div class="form-row">
-                  <div class="col-md-6 mb-3">
-                    <label for="validationServer01"></label>
-                    <input type="text" class="form-control is-valid" id="UsernameInp" placeholder="Username" required>
-                    <div class="valid-feedback">
-                      Looks good!
-                    </div>
-                  </div>
-                  <div class="col-md-6 mb-3">
-                    <label for="validationServer02"></label>
-                    <input type="text" class="form-control is-valid" id="PasswordInp" placeholder="Password" required>
-                    <div class="valid-feedback">
-                      Looks good!
-                    </div>
-                  </div>
-                </div>
-                <div class="row2">
-                    <div class="col-md-6 mb-3">
-                    <button class="btn btn-primary" onclick="login()" type="button">Submit form</button>
-                </div>
-                <div class="col-md-6 mb-3">
-                    <button class="btn btn-primary" onclick="window.location.href='/UserReg.html';" type="button">Register</button>
-                </div>
-            </div> 
-              </form>
-        <script src="/login.js"></script>    
+        
+              </tr>
+            </thead>
+            <tbody id="tbody">
+             
+            </tbody>
+            
+          </table>
+        <script src="login.js"></script>
+        <script src="editprofile.js"></script>    
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" 
             integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
             crossorigin="anonymous"></script>
