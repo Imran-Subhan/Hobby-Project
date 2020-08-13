@@ -1,7 +1,8 @@
 // window.onload(showProfile());
 
-var usersid = require('./login.js');
-console.log(usersid);
+let userid = sessionStorage.getItem("userid");
+
+console.log(userid);
 
 // function showProfile() {
 //     fetch('http://localhost:9001/showProfile' + usersid,)
