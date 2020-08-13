@@ -1,24 +1,24 @@
-window.onload(showProfile());
+// window.onload(showProfile());
 
-let usersid = require('./login.js');
+var usersid = require('./login.js');
 console.log(usersid);
 
-function showProfile() {
-    fetch('http://localhost:9001/showProfile' + usersid,)
-      .then(
-      function(response) {
-      if (response.status !== 200) {
-      console.log('Looks like there was a problem. Status Code: ' +
-      response.status);
-      return;
-      }
-      response.json().then(function(data) {
-            alert(usersid);
-            console.log(data);
-            for (let i =0; i<data.length; i++) {
-            console.log("userid: " + data[i].userid);
-            console.log("username: " +data[i].username);
-            console.log("password: " +data[i].password);
+// function showProfile() {
+//     fetch('http://localhost:9001/showProfile' + usersid,)
+//       .then(
+//       function(response) {
+//       if (response.status !== 200) {
+//       console.log('Looks like there was a problem. Status Code: ' +
+//       response.status);
+//       return;
+//       }
+//       response.json().then(function(data) {
+//             alert(usersid);
+//             console.log(data);
+//             for (let i =0; i<data.length; i++) {
+//             console.log("userid: " + data[i].userid);
+//             console.log("username: " +data[i].username);
+//             console.log("password: " +data[i].password);
             
             
 
@@ -32,7 +32,7 @@ function showProfile() {
          
         //   document.getElementById("tbody").innerHTML+=string;
         
-          }
-          });
-          })
-        }
+        //   }
+        //   });
+        //   })
+        // }
