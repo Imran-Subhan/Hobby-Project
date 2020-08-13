@@ -12,7 +12,14 @@
     <link rel="StyleSheet" href="StyleSheet.css">
 
     <style>
-       
+    .form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
     </style>
    
 
@@ -61,24 +68,45 @@
         
         </nav>
 
-        <table class="table table-dark">
+        <table class="table table-dark" id="UserTable">
             <thead>
               <tr>
-                <th scope="col">username</th>
-                <th scope="col">password</th>
+                <th scope="col-sm">user id</th>
+                <th scope="col-sm">username</th>
+                <th scope="col-sm">password</th>
                 
         
               </tr>
             </thead>
             <tbody id="tbody">
-             
+                <!-- <button type='button' class='btn btn-block btn-info' onclick="showProfile(userid)"> Update </button> -->
             </tbody>
             
           </table>
-          
+
+          <form class="form-popup col-md-offset-3 col-md-6" action="#">
+            <div class="form-group">
+                <label for="fname" class="control-label">First Name</label>
+                <input type="text" class="form-control" id="fname" placeholder="First name">
+            </div>
+            <div class="form-group">
+                <label for="lname" class="control-label">Last Name</label>
+                <input type="text" class="form-control" id="lname" placeholder="Last name">
+            </div>
+            <div class="form-group">
+                <label for="email" class="control-label">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="Your email">
+            </div>
+            <div class="form-group">
+                <label for="password" class="control-label">Password</label>
+                <input type="email" class="form-control" id="password" placeholder="Your password">
+            </div>
+            <button type="submit" class="btn btn-default">Sign up</button>
+        </form>
+          <!-- <button type="button" onclick = "ShowHide()" class="btn btn-block btn-danger">update</button> -->
           <!-- scripts -->
           
-        <script src="login.js"></script>
+        
         <script src="editprofile.js"></script>    
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" 
             integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
