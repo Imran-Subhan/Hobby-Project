@@ -57,4 +57,10 @@ public User ShowProfile(int id) {
 			return message;
 				
 			}
+		
+		public String updateaUser(User user) {
+			String message ="User updated";
+			Urepo.save(user);
+			return message;
+		}
 }

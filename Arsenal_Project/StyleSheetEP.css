@@ -67,11 +67,10 @@ body {font-family: Arial, Helvetica, sans-serif;}
   opacity: 1;
 }
 
-.form-container #updplayername {
-  background-color: rgba(85, 85, 85, 0.705);
-
+.form-container #Upduserid{
+    background-color: #555;
 }
-.form-container #updplayerno {
-  background-color: rgba(85, 85, 85, 0.705);
 
+.form-container #Updusername{
+    background-color: #555;
 }

@@ -1,9 +1,13 @@
-// window.onload(showProfile());
+// window.onload(showProfile(userid));
 
 let userid = sessionStorage.getItem("userid");
 
+showProfile(userid);
+
+// Get: ShowProfile function
+
 function showProfile(userid) {
-}
+
     fetch('http://localhost:9001/showProfile/' + userid,)
       .then(
       function(response) {
@@ -33,8 +37,56 @@ function showProfile(userid) {
           
           });
           })
+        }
+        //Put: Update Function
 
+          function updateUser(id) {
+        fetch('http://localhost:9001/UpdatePlayer/'+id, {
+                method: 'Put',
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    userid: playername,
+                    username: playerno,
+                    password: Attack,
+                    defence: Defence
+                
+                })
+              })
+            .then(
+            function(response) {
+                location.reload();
+                console.log("Player updated")
+            if (response.status !== 200) {
+            console.log('Looks like there was a problem. Status Code: ' +
+            response.status);
+            return;
+            }
+          })
+        }
+
+            //Delete: DeleteUser Function
+
+            function DeleteUser(id){
+              fetch('http://localhost:9001/DeleteUser/'+id, {
+                method: 'Delete',
+                headers: {
+                  "Content-type": "application/x-www-form-urlencoded; charset=UTF-8"
+                },
+                body: 'foo=bar&lorem=ipsum'
+              })
+              .then(id)
+              .then(function (data) {
+                console.log('Request succeeded with JSON response', data);
+                Logout();
+              })
+              .catch(function (error) {
+                console.log('Request failed', error);
+              });
+          }
         
+
         // show/hide function
 
           function ShowHide() {
@@ -52,7 +104,8 @@ function showProfile(userid) {
             // if (frm.style.visibility === "hidden") {
 
             }
-          // }
+          
+          
 
           function Logout(){
             window.location.replace("login.html")
@@ -60,20 +113,17 @@ function showProfile(userid) {
           }
 
 
-          function DeleteUser(id){
-            fetch('http://localhost:9001/DeleteUser/'+id, {
-              method: 'Delete',
-              headers: {
-                "Content-type": "application/x-www-form-urlencoded; charset=UTF-8"
-              },
-              body: 'foo=bar&lorem=ipsum'
-            })
-            .then(id)
-            .then(function (data) {
-              console.log('Request succeeded with JSON response', data);
-              Logout();
-            })
-            .catch(function (error) {
-              console.log('Request failed', error);
-            });
+
+        function openForm(id,uname,pword) {
+          //alert(playerno+".."+playername)
+          document.getElementById("myForm").style.display = "block";
+          alert(uname);
+
+          document.getElementById("Upduserid").value = id;
+          document.getElementById("Updusername").value = uname;
+          document.getElementById("Updpassword").value = pword;
+          
+        }
+        function closeForm() {
+          document.getElementById("myForm").style.display = "none";
         }

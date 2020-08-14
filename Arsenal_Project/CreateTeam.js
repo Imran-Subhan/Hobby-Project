@@ -36,9 +36,7 @@ function getAll() {
           //alert(playerno+".."+playername)
           document.getElementById("myForm").style.display = "block";
 
-          var number = playerno;
-          console.log(number)
-          document.getElementById("updplayerno").value = number;
+          document.getElementById("updplayerno").value = playerno;
           document.getElementById("updplayername").value = pname;
           document.getElementById("updAttack").value = attack;
           document.getElementById("updDefence").value = defence;

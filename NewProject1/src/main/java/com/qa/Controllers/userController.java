@@ -10,10 +10,12 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-	import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 	import org.springframework.web.bind.annotation.RestController;
 
-	import com.qa.Entities.User;
+import com.qa.Entities.Player;
+import com.qa.Entities.User;
 	import com.qa.Services.UserRegService;
 
 	@CrossOrigin
@@ -49,6 +51,11 @@ import org.springframework.web.bind.annotation.PostMapping;
 		public String deleteUsers(@PathVariable int id) {
 		return userRegserv.DeleteUser(id);
 	}
+		@PutMapping ("/UpdateUser/{id}")
+		public String updateplayer(@RequestBody User user, @PathVariable int id) {
+		return userRegserv.updateaUser(user);
+		
+		}
 	}
 
 

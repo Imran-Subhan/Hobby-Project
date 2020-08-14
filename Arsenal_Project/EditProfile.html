@@ -10,16 +10,8 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="StyleSheet" href="StyleSheet.css">
-
+    <link rel="StyleSheet" href="StyleSheetEP.css">
     <style>
-    .form-popup {
-  display: none;
-  position: fixed;
-  bottom: 0;
-  right: 15px;
-  border: 3px solid #f1f1f1;
-  z-index: 9;
-}
     </style>
    
 
@@ -45,24 +37,14 @@
                         <a class="nav-link" href="MemberHome.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="Create.html">Create</a>
-                        </li>
-                    <li class="nav-item  active">
-                        <a class="nav-link" href="EditProfile.html">EditProfile</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
-                            role="button" data-toggle="dropdown">G.O.A.T Players</a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class ="dropdown-item" href="GOATFWS.html"> Forwards</a>
-                                <a class ="dropdown-item" href="GOATMIDS.html"> Midfielders</a>
-                                <a class ="dropdown-item" href="GOATDEFS.html"> Defenders</a>
-                                <a class ="dropdown-item" href="GOATGKS.html"> Goalkeepers</a>
-                            </div>
+                        <a class="nav-link" href="Create.html">Create Player</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">contact us</a>
+                        <a class="nav-link" href="CreateTeam.html">My Arsenal Squad</a>
                     </li>
+                    <li class="nav-item  active">
+                        <a class="nav-link" href="EditProfile.html">My Profile</a>
+                    </li>         
                 </ul>
             </div>
         
@@ -84,29 +66,27 @@
             
           </table>
 
-          <form class="form-popup col-md-offset-3 col-md-6" action="#">
-            <div class="form-group">
-                <label for="fname" class="control-label">First Name</label>
-                <input type="text" class="form-control" id="fname" placeholder="First name">
-            </div>
-            <div class="form-group">
-                <label for="lname" class="control-label">Last Name</label>
-                <input type="text" class="form-control" id="lname" placeholder="Last name">
-            </div>
-            <div class="form-group">
-                <label for="email" class="control-label">Email</label>
-                <input type="email" class="form-control" id="email" placeholder="Your email">
-            </div>
-            <div class="form-group">
-                <label for="password" class="control-label">Password</label>
-                <input type="email" class="form-control" id="password" placeholder="Your password">
-            </div>
-            <button type="submit" class="btn btn-default">Sign up</button>
-        </form>
-          <!-- <button type="button" onclick = "ShowHide()" class="btn btn-block btn-danger">update</button> -->
-          <!-- scripts -->
+          <div class="form-popup" id="myForm">
+            <form class="form-container">
+              <h1>Update Stats</h1>
           
-        
+              <label for="userid"> <b>User ID</b></label>
+              <input type="text" id="Upduserid" readonly="readonly" name="User ID" required>
+          
+              <label for="Username"> <b>Username</b></label>
+              <input type="text" id="Updusername" readonly="readonly" name="Username" required>
+          
+              <label for="Password"> <b>Password</b></label>
+              <input type="Number" id="Updpassword" placeholder="Enter Password Stat" name="Password" required>
+          
+              <button type="button" onclick="updateUser(id)" class="btn">Update</button>
+              <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+            </form>
+          </div>
+          <!-- <button type="button" onclick = "ShowHide()" class="btn btn-block btn-danger">update</button> -->
+
+          <!-- scripts -->
+
         <script src="editprofile.js"></script>    
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" 
             integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
