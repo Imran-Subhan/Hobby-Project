@@ -17,10 +17,9 @@ public class PlayerService {
 	PlayerRepo repo;
 	
 	
-	public String newPlayer(Player p) {
-		String message ="Player added";
-		repo.save(p);
-		return message;
+	public Player create(Player p) {
+		Player saved = this.repo.save(p);
+		return saved;
 	}
 	
 	public List<Player> ShowallPlayers(){

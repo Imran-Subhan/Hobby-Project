@@ -4,6 +4,8 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,6 +20,7 @@ import com.qa.Repositories.PlayerRepo;
 import com.qa.Services.PlayerService;
 
 
+
 @CrossOrigin
 @RestController
 public class PController {
@@ -29,8 +32,9 @@ public class PController {
 	PlayerRepo repo;
 	
 	@PostMapping ("/AddPlayer") 
-	public String Addplayer(@RequestBody Player p) {
-	return service.newPlayer(p);
+	public ResponseEntity<Player> create(@RequestBody Player p) {
+		Player created = this.service.create(p);
+		return new ResponseEntity<>(created, HttpStatus.CREATED);
 	}
 	
 	@GetMapping ("/ShowPlayers") 
