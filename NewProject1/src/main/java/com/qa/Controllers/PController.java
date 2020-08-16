@@ -42,18 +42,14 @@ public class PController {
 		return service.ShowallPlayers();
 		
 	}
-	
-	@GetMapping ("/Resetstats/{id}") 
-	public String Reset(@PathVariable int id) {
-		return service.UpdatePlayer(id);
-		
-	}
+
 	@DeleteMapping ("/DeletePlayer/{id}")
 	public String deletePlayer(@PathVariable int id) {
-		return service.DeletePlayer(id);
+		 service.DeletePlayer(id);
+		 return "player Deleted";
 }
 	@PutMapping ("/UpdatePlayer/{id}")
-	public String updateplayer(@RequestBody Player p, @PathVariable int id) {
+	public Player updateplayer(@RequestBody Player p, @PathVariable int id) {
 	return service.updateaPlayer(p);
 	
 	}

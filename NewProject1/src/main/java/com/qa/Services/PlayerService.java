@@ -26,36 +26,14 @@ public class PlayerService {
 		return repo.findAll();
 	}
 	
-	public String DeletePlayer(int id) { 
-		String message ="";
-		Optional<Player> player = repo.findById(id);
-		if(player.isPresent()) {
-			repo.deleteById(id);
-			message= "record deleted";
-		}else {
-			message="cant delete with the id given";		
-		}
-	
-		return message;
+	public void DeletePlayer(int id) { 
+		repo.deleteById(id);
 	}
-		public String UpdatePlayer(int id) {
-			String message ="";
-			Optional<Player> player = repo.findById(id);
-			if(player.isPresent()) {
-				repo.flush();
-				message= "update record";
-			}else {
-				message="cant update with the id given";		
-			}
 		
-			return message;
-				
-			}
-		
-		public String updateaPlayer(Player p) {
-			String message ="Player updated";
-			repo.save(p);
-			return message;
+		public Player updateaPlayer(Player p) {
+			
+			Player Updated = repo.save(p);
+			return Updated;
 		}
 		
 		}
