@@ -34,24 +34,29 @@ public class PController {
 	@PostMapping ("/AddPlayer") 
 	public ResponseEntity<Player> create(@RequestBody Player p) {
 		Player created = this.service.create(p);
-		return new ResponseEntity<>(created, HttpStatus.CREATED);
-	}
+		
+		return new ResponseEntity<Player>(created, HttpStatus.OK);
+}
 	
 	@GetMapping ("/ShowPlayers") 
 	public ResponseEntity<List<Player>> ShowAllPlayers() {
 		List<Player> playerlist = this.service.ShowallPlayers();
-		return new ResponseEntity<List<Player>>(playerlist, HttpStatus.OK);
 		
-	}
+		return new ResponseEntity<List<Player>>(playerlist, HttpStatus.OK);
+}
 
 	@DeleteMapping ("/DeletePlayer/{id}")
-	public String deletePlayer(@PathVariable int id) {
+	public ResponseEntity<Object> deletePlayer(@PathVariable int id) {
 		 service.DeletePlayer(id);
-		 return "player Deleted";
+		 
+		 return ResponseEntity.noContent().build();
 }
-	@PutMapping ("/UpdatePlayer/{id}")
-	public Player updateplayer(@RequestBody Player p, @PathVariable int id) {
-	return service.updateaPlayer(p);
 	
-	}
-	}
+	@PutMapping ("/UpdatePlayer/{id}")
+	public ResponseEntity<Player> updateplayer(@RequestBody Player p, @PathVariable int id) {
+	final Player updatedplayer = service.updateaPlayer(p);
+	
+	return ResponseEntity.ok(updatedplayer);
+}
+	
+}

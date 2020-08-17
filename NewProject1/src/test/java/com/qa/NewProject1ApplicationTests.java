@@ -37,33 +37,33 @@ class NewProject1ApplicationTests {
 	public void ShowallPlayers() {
 		when(repo.findAll()).thenReturn(Stream
 				.of(new Player(10, "Ozil", 70, 70), new Player(7, "Saka", 75, 60)).collect(Collectors.toList()));
-		assertEquals(2, service.ShowallPlayers().size());
+		assertEquals(2, service.ShowallPlayers().size());}
 	}
-	
-	@Test
-	public void CreateTest() {
-		Player player = new Player(10, "Ozil", 70, 70);
-		when(repo.save(player)).thenReturn(player);
-		assertEquals(player, service.create(player));
-	}
-	
-	@Test
-	public void DeletePlayerTest() {
-		Player player = new Player(10, "Ozil", 70, 70);
-		service.DeletePlayer(10);
-		verify(repo, times(1)).deleteById(10);
-		}
-	@Test
-	public void UpdateAPlayerTest() {
-		Player player = new Player(10, "Ozil", 70, 70);
-		Player Updated_player = new Player(10, "Ozil", 85, 75);
-		when(repo.save(player)).thenReturn(player);
-		when(repo.save(Updated_player)).thenReturn(Updated_player);
-		assertEquals(Updated_player, service.updateaPlayer(Updated_player));
-		assertNotSame(player, Updated_player);
-		
-	}
-	}
+//	
+//	@Test
+//	public void CreateTest() {
+//		Player player = new Player(10, "Ozil", 70, 70);
+//		when(repo.save(player)).thenReturn(player);
+//		assertEquals(player, service.create(player));
+//	}
+//	
+//	@Test
+//	public void DeletePlayerTest() {
+//		Player player = new Player(10, "Ozil", 70, 70);
+//		service.DeletePlayer(10);
+//		verify(repo, times(1)).deleteById(10);
+//		}
+//	@Test
+//	public void UpdateAPlayerTest() {
+//		Player player = new Player(10, "Ozil", 70, 70);
+//		Player Updated_player = new Player(10, "Ozil", 85, 75);
+//		when(repo.save(player)).thenReturn(player);
+//		when(repo.save(Updated_player)).thenReturn(Updated_player);
+//		assertEquals(Updated_player, service.updateaPlayer(Updated_player));
+//		assertNotSame(player, Updated_player);
+//		
+//	}
+//	}
 
 	
 

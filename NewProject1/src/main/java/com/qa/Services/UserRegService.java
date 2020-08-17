@@ -16,21 +16,21 @@ public class UserRegService {
 	@Autowired
 	UserRegRepo Urepo;
 	
-	public String saveUser(User user) { 
-		String message = "User Saved";
-		Urepo.save(user);
-		return message;
+	public User saveUser(User user) { 
+		User saved = this.Urepo.save(user);
+		return saved;
 		
 	}
-	public List<User> ShowUsers(User user) {
+	public List<User> ShowUsers() {
 		
 		return Urepo.findAll();
 	}
 	
 public User ShowProfile(int id) {
 		
-		return Urepo.findById(id).get();
-	}
+	return Urepo.findById(id).get();
+
+}
 
 	public String DeleteUser(int id) { 
 		String message ="";
@@ -44,23 +44,11 @@ public User ShowProfile(int id) {
 	
 		return message;
 	}
-		public String UpdateUser(int id) {
-			String message ="";
-			Optional<User> user = Urepo.findById(id);
-			if(user.isPresent()) {
-				Urepo.flush();
-				message= "update record";
-			}else {
-				message="cant update with the id given";		
-			}
 		
-			return message;
-				
-			}
-		
-		public String updateaUser(User user) {
-			String message ="User updated";
-			Urepo.save(user);
-			return message;
+		public User updateaUser(User user) {
+			
+			User updateduser = Urepo.save(user);
+			
+			return updateduser;
 		}
 }

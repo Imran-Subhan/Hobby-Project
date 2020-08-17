@@ -4,7 +4,9 @@ package com.qa.Controllers;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
-	import org.springframework.stereotype.Controller;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
 	import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -23,7 +25,7 @@ import com.qa.Entities.User;
 	public class userController {
 		
 		@Autowired
-		UserRegService userRegserv;
+		UserRegService userservice;
 
 		
 		//===============
@@ -31,30 +33,39 @@ import com.qa.Entities.User;
 		//===============
 
 		@PostMapping("/AddUser")
-	    public String saverecord(@RequestBody User user) {
-	     return userRegserv.saveUser(user); 
+	    public ResponseEntity<User> saverecord(@RequestBody User user) {
+			User created = this.userservice.saveUser(user);
+			
+	     return new ResponseEntity<User>(created, HttpStatus.OK); 
 	    }
 		
 		@GetMapping ("/showUsers")
-		public List<User> showUsers(User user) {
-			System.out.println("hello");
-			return userRegserv.ShowUsers(user);
-		}
+		public ResponseEntity<List<User>> showUsers() {
+			List<User> userlist = this.userservice.ShowUsers();
+			
+			return new ResponseEntity<List<User>>(userlist, HttpStatus.OK);
+	}
+
 		
 		@GetMapping ("/showProfile/{id}")
-		public User showUsers(@PathVariable int id) {
-			System.out.println("hello");
-			return userRegserv.ShowProfile(id);
-			}
+		public ResponseEntity<User> showUsers(@PathVariable int id) {
+			User oneuser = this.userservice.ShowProfile(id);
+			
+			return new ResponseEntity<User>(oneuser, HttpStatus.OK);
+		}
+		
 		
 		@DeleteMapping ("/DeleteUser/{id}")
-		public String deleteUsers(@PathVariable int id) {
-		return userRegserv.DeleteUser(id);
+		public ResponseEntity<Object> deletePlayer(@PathVariable int id) {
+			 userservice.DeleteUser(id);
+			 
+			 return ResponseEntity.noContent().build();
 	}
 		@PutMapping ("/UpdateUser/{id}")
-		public String updateplayer(@RequestBody User user, @PathVariable int id) {
-		return userRegserv.updateaUser(user);
-		
+		public ResponseEntity<User> updateuser(@RequestBody User user, @PathVariable int id) {
+			final User updateduser = userservice.updateaUser(user);
+			
+			return ResponseEntity.ok(updateduser);
 		}
 	}
 
