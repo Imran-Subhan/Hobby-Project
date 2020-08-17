@@ -38,8 +38,9 @@ public class PController {
 	}
 	
 	@GetMapping ("/ShowPlayers") 
-	public List<Player> ShowAllPlayers() {
-		return service.ShowallPlayers();
+	public ResponseEntity<List<Player>> ShowAllPlayers() {
+		List<Player> playerlist = this.service.ShowallPlayers();
+		return new ResponseEntity<List<Player>>(playerlist, HttpStatus.OK);
 		
 	}
 

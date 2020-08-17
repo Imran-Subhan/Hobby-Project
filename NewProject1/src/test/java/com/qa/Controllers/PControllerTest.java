@@ -1,10 +1,13 @@
 //package com.qa.Controllers;
 //
+//import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 //import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 //import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
+//import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 //import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 //
 //import org.assertj.core.api.Assertions;
+//import org.hamcrest.Matchers;
 //import org.junit.Before;
 //import org.junit.Test;
 //import org.junit.runner.RunWith;
@@ -43,8 +46,6 @@
 //    
 //    private Player testplayer;
 //    
-//    private Player testplayerwithID;
-//    
 //    private final Player TEST_SAVED_Player = new Player(10, "Ozil", 70, 70);
 //    
 //    private int id;
@@ -53,13 +54,13 @@
 //	public void init() {
 //		this.repo.deleteAll();
 //		this.testplayer = new Player(10, "Ozil", 70, 70);
-//		this.testplayerwithID = this.repo.save(this.testplayer);
+//		
 //		
 //		
 //    }
 //    
 //    @Test
-//    public void testCreate() throws Exception {
+//    public void testShowPlayers() throws Exception {
 //		Mockito.when(this.repo.save(this.testplayer)).thenReturn(TEST_SAVED_Player);
 //		MockHttpServletRequestBuilder mockrequest = MockMvcRequestBuilders.request(HttpMethod.POST, "/AddPlayer");
 //
@@ -68,22 +69,27 @@
 //		
 //		Assertions.assertThat(this.repo.save(this.testplayer)).isEqualTo(this.TEST_SAVED_Player);
 //		
-////		Mockito.verify(this.repo, Mockito.times(1)).save(this.testplayer);
+//		Mockito.verify(this.repo, Mockito.times(1)).save(this.testplayer);
 //		
 //		ResultMatcher matchStatus = MockMvcResultMatchers.status().isCreated();
 //		
 //		ResultMatcher matchContent = MockMvcResultMatchers.content()
 //				.json(this.mapper.writeValueAsString(TEST_SAVED_Player));
 //		
-//		this.mock.perform(post("/AddPlayer"));
-////		.andExpect(status().isCreated());
-////		.andExpect(content().json(this.mapper.writeValueAsString(TEST_SAVED_Player)));
-//		
+//		this.mock.perform(get("/ShowPlayers"))
+//		.andExpect(status().isOk())
+//		.andExpect(content().json(this.mapper.writeValueAsString(TEST_SAVED_Player)));
+//		.andExpect(jsonPath("$.playerno", Matchers.is(10)))
+//		.andExpect(jsonPath("$.playername", Matchers.is("Ozil")))
+//		.andExpect(jsonPath("$.attack", Matchers.is(70)))
+//		.andExpect(jsonPath("$.defence", Matchers.is(70)));
+//
+//
 //				
 //		
 //	}
-//    
-//    
-//    
+    
+    
+    
 //    
 //}

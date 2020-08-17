@@ -5,12 +5,31 @@ h1{font-size: 64px; background-color: red; color: white;  font-family: Impact, H
 nav {
 background-color: Red;
 font-family:Arial, Helvetica, sans-serif;
+font-size: 16px;
 font-weight: bold;
 }
 
 
+#login {
+    float:right;
+    margin-right: 20px;
+    margin-top: 13px;
+    padding: 5px 25px;
+    background-color: rgba(194, 0, 0, 0.288);
+    font-size: 18px;
+    border-radius: 7px;
+}
 
+#login:hover {
+    background-color: rgb(170, 0, 0);
+}
 
+#login:active {
+    transform: translateY(4px);
+}
+.navbar .navbar-brand img {
+height: 60px;
+width:60px;
 
 .wireframe {
     border:2px solid green;
