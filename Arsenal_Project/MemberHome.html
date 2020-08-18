@@ -3,16 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Arsenal_MemberHomePage</title>
+    <title>Arsenal_MembersHomePage</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
             integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
             crossorigin="anonymous">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="StyleSheet" href="StyleSheet.css">
-
+    
     <style>
-       
+       #login {
+           float:right;
+           margin-right: 20px;
+           margin-top: 20px;
+       }
     </style>
    
 
@@ -26,7 +30,8 @@
         </center>
 
         <nav class="navbar navbar-expand-md navbar-dark bg dark">
-            <a class="navbar-brand" href="#">Logo</a>
+            <a class="navbar-brand" href="#">
+                <img alt="Brand" src="/Project-images/Arsenal-logo-crop.jpg"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse"
             data-target="#navbarSupportedContent">
             <span class="navbar-toggler-icon"></span>
@@ -34,25 +39,18 @@
     
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav md-auto">
-                    <li class="nav-item">
+                    <li class="nav-item active">
                         <a class="nav-link" href="Home.html">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="Create.html">Create</a>
                         </li>
-                    <li class="nav-item  active">
-                        <a class="nav-link" href="EditProfile.html">EditProfile</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
-                            role="button" data-toggle="dropdown">G.O.A.T Players</a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class ="dropdown-item" href="GOATFWS.html"> Forwards</a>
-                                <a class ="dropdown-item" href="GOATMIDS.html"> Midfielders</a>
-                                <a class ="dropdown-item" href="GOATDEFS.html"> Defenders</a>
-                                <a class ="dropdown-item" href="GOATGKS.html"> Goalkeepers</a>
-                            </div>
-                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="CreateTeam.html">My Arsenal Squad</a>
+                        </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="UserReg.html">Become a Member</a>
+                        </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">contact us</a>
                     </li>
@@ -60,6 +58,16 @@
             </div>
         
         </nav>
+
+        <button class="button" id="login" onclick="location.assign('login.html')">Login</button>
+       
+          </div>
+        <div class="container wireframe">
+            <div class="row justify-content-center myrow">
+                <div class="col-sm">
+                    <center><h2>Welcome to Arsenal Stats Hompage</h2></center>
+                </div>
+            </div>
             
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" 
             integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"

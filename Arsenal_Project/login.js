@@ -10,10 +10,7 @@ function login() {
       response.json().then(function(data) {
           console.log(data);
           for (let i =0; i<data.length; i++) {
-            // console.log("userid: " + data[i].userid);
-            // console.log("username: " +data[i].username);
-            // console.log("password: " +data[i].password);
-            console.log("sadasd "+ data[i].userid)
+
             sessionStorage.setItem("userid", data[i].userid);
             if(document.getElementById("UsernameInp").value.includes(data[i].username) 
             && document.getElementById("PasswordInp").value.includes(data[i].password)) {
@@ -22,7 +19,7 @@ function login() {
             
 
             console.log("correct username & password");
-            window.location.href='editProfile.html';
+            window.location.href='MemberHome.html';
             
            
                 break;
