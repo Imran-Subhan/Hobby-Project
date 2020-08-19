@@ -1,3 +1,15 @@
 #submitmsg {
     display: none;
 }
+form {
+    width: 100%;
+    
+}
+
+.slidecontainer {
+    margin-top: 20px;
+    margin-left: 30px;
+    padding: 1px;
+    width: 10px;
+    font-weight: 500;
+}

@@ -30,7 +30,7 @@ function showProfile(userid) {
             //String2 is the button to open update form
            let string2="<button type='button' class='btn btn-block btn-info' onclick=openForm("+userid+",'"+data.username+"','"+data.password+"')> Update </button>"  
            //adding string2 to string. string is data inserted into the tbody.
-           let string = '<tr id="userid"><td>'+userid+'</td><td id="playerno">'+data.username+'</td><td><input class = "bg-dark text-light" id = "pas" type = "password" disabled value = "'+data.password+'"></input></td><td>' 
+           let string = '<tr id="userid"><td>'+userid+'</td><td id="playerno">'+data.username+'</td><td><input class = "bg-dark text-light" id = "pass" type = "password" disabled value = "'+data.password+'"></input></td><td>' 
           + '<button type="button" onclick = "DeleteUser('+ userid+')"class="btn btn-block btn-danger">Logout & Delete Account</button></td><td>'
           + string2;
          
@@ -42,10 +42,10 @@ function showProfile(userid) {
         }
         //Put: Update Function
 
-          function updateUser(id) {
+          function updateUser() {
 
-            console.log("sdasd " +document.getElementById("Updpassword").value)
-        fetch('http://localhost:9001/UpdateUser/'+document.getElementById("Upduserid").value, {
+            console.log("sdasd " + document.getElementById("Updpassword").value)
+            fetch('http://localhost:9001/UpdateUser/'+document.getElementById("Upduserid").value, {
                 method: 'Put',
                 headers: {
                     "Content-Type": "application/json"
@@ -53,7 +53,7 @@ function showProfile(userid) {
                 body: JSON.stringify({
                     userid:document.getElementById("Upduserid").value,
                     username: document.getElementById("Updusername").value,
-                    password: document.getElementById("pas").value
+                    password: document.getElementById("pass").value
                 
                 })
               })

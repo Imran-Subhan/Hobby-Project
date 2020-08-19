@@ -13,6 +13,11 @@
     <link rel="StyleSheet" href="StyleSheetCreate.css">
 
     <style>
+      body, html {
+  height: 100%;
+  margin: 0;
+}
+
 
 form {
             width: 30%;
@@ -62,10 +67,15 @@ form {
       
       </nav>
   </div>
-  
-  <h2>The Creation Page</h2>
 
-    <span id="submitmsg" class="text-success">Congratulations you have added a player to your Squad</span>
+  <div class="container wireframe">
+    <div class="row justify-content-center myrow">
+        <div class="col-sm">
+          <center><h2>The Creation Page</h2></center>
+        </div>
+    </div>
+    <div class="row justify-content-center myrow">
+      <div class="col-sm">
   <form>
     <div class ="form-group row">
       <label for="inputPlayername" class="col-sm col-form-label">Select a player</label>       
@@ -114,17 +124,20 @@ form {
         </div>
       </div>
     </div>
-    <a class="link" href="/CreateTeam.html">CreateTeam</a>
     
     <div class="form-group row">
       <div class="col-sm-10">
         <button onclick="SaveStats()" type="submit" class="btn btn-primary">Save</button>
       </div>
-      <div class="col-sm">
-        <button type="button" onclick="getValue(Selection)" class="btn btn-primary">console.log</button>
-      </div>
     </div>
   </form>
+      </div>
+      <div class="col-sm">
+        <img src="Project-images/Arteta.jpg" size="shrink-to-fit">
+        </div>
+        <div class="col-sm">
+
+        </div>   
   <script src="create.js"></script>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" 
   integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
