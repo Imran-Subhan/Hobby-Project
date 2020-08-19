@@ -10,7 +10,7 @@ font-weight: bold;
 }
 
 
-#login {
+.btn-mem {
     float:right;
     margin-right: 20px;
     margin-top: 13px;
@@ -20,11 +20,11 @@ font-weight: bold;
     border-radius: 7px;
 }
 
-#login:hover {
+.btn-mem:hover {
     background-color: rgb(170, 0, 0);
 }
 
-#login:active {
+.btn-mem:active {
     transform: translateY(4px);
 }
 .navbar .navbar-brand img {

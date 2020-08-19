@@ -3,6 +3,24 @@ function getValue(selection) {
     return selection.value;
   }
 
+//Slider attack Value
+var slider1 = document.getElementById("inputAttack");
+var output1 = document.getElementById("stat1");
+output1.innerHTML = slider1.value;
+
+slider1.oninput = function() {
+  output1.innerHTML = this.value;
+}
+
+//Slider defence Value
+var slider2 = document.getElementById("inputDefence");
+var output2 = document.getElementById("stat2");
+output2.innerHTML = slider2.value;
+
+slider2.oninput = function() {
+  output2.innerHTML = slider2.value;
+}
+
 function SaveStats() {
 let Playerno = document.getElementById("inputPlayerno").value;
 let Attack = document.getElementById("inputAttack").value;

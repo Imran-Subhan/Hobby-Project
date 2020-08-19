@@ -15,6 +15,7 @@ import org.apache.catalina.Context;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.SpringApplication;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.junit4.SpringRunner;
@@ -32,6 +33,7 @@ class NewProject1ApplicationTests {
 	
 	@MockBean
 	private PlayerRepo repo;
+	
 	
 	@Test
 	public void ShowallPlayers() {
