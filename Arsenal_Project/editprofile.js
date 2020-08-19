@@ -18,7 +18,9 @@ function showProfile(userid) {
       }
       response.json().then(function(data) {
             console.log(data);
-            // for (let i =0; i<data.length; i++) {
+            
+            let username = data.username;
+            let password = data.password;
             console.log("userid: " + data.userid);
             console.log("username: " +data.username);
             console.log("password: " +data.password);
@@ -26,9 +28,9 @@ function showProfile(userid) {
             
 
             //String2 is the button to open update form
-           let string2="<button type='button' class='btn btn-block btn-info' onclick=openForm("+userid+",'"+data.username+"',"+data.password+")> Update </button>"  
+           let string2="<button type='button' class='btn btn-block btn-info' onclick=openForm("+userid+",'"+data.username+"','"+data.password+"')> Update </button>"  
            //adding string2 to string. string is data inserted into the tbody.
-           let string = '<tr id="userid"><td>'+userid+'</td><td id="playerno">'+data.username+'</td><td>'+data.password+'</td><td>' 
+           let string = '<tr id="userid"><td>'+userid+'</td><td id="playerno">'+data.username+'</td><td><input class = "bg-dark text-light" id = "pas" type = "password" disabled value = "'+data.password+'"></input></td><td>' 
           + '<button type="button" onclick = "DeleteUser('+ userid+')"class="btn btn-block btn-danger">Logout & Delete Account</button></td><td>'
           + string2;
          
@@ -41,23 +43,24 @@ function showProfile(userid) {
         //Put: Update Function
 
           function updateUser(id) {
-        fetch('http://localhost:9001/UpdatePlayer/'+id, {
+
+            console.log("sdasd " +document.getElementById("Updpassword").value)
+        fetch('http://localhost:9001/UpdateUser/'+document.getElementById("Upduserid").value, {
                 method: 'Put',
                 headers: {
                     "Content-Type": "application/json"
                 },
                 body: JSON.stringify({
-                    userid: playername,
-                    username: playerno,
-                    password: Attack,
-                    defence: Defence
+                    userid:document.getElementById("Upduserid").value,
+                    username: document.getElementById("Updusername").value,
+                    password: document.getElementById("pas").value
                 
                 })
               })
             .then(
             function(response) {
                 location.reload();
-                console.log("Player updated")
+                console.log("Password updated")
             if (response.status !== 200) {
             console.log('Looks like there was a problem. Status Code: ' +
             response.status);
@@ -114,10 +117,11 @@ function showProfile(userid) {
 
 
 
-        function openForm(id,uname,pword) {
+        function openForm(id, uname, pword) {
           //alert(playerno+".."+playername)
           document.getElementById("myForm").style.display = "block";
-          alert(uname);
+          console.log(id);
+          console.log(uname);
 
           document.getElementById("Upduserid").value = id;
           document.getElementById("Updusername").value = uname;

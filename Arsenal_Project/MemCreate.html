@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Arsenal_Create</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+            crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="StyleSheet" href="StyleSheet.css">
+    <link rel="StyleSheet" href="StyleSheetCreate.css">
+
+    <style>
+
+form {
+            width: 30%;
+            margin: 100px;
+        }
+#PlayerList:hover {
+  background-color: rgb(5, 51, 53);
+}
+.dropdown-menu a dropdown-item:hover {background-color: gray
+}
+    </style>
+
+</head>
+<body>
+
+        <center>
+    <h1>ARSENAL STATS</h1>
+        </center>
+
+        
+        <nav class="navbar navbar-expand-md navbar-dark bg dark">
+            <a class="navbar-brand" href="#">
+                <img alt="Brand" src="/Project-images/Arsenal-logo-crop.jpg"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav md-auto">
+                    <li class="nav-item ">
+                        <a class="nav-link" href="MemberHome.html">Home</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="MemCreate.html">Create</a>
+                        </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="MemCreateTeam.html">My Arsenal Squad</a>
+                        </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="EditProfile.html">My Profile</a>
+                        </li>
+                </ul>
+            </div>
+        
+        </nav>
+  </div>
+  
+  <h2>The Creation Page</h2>
+
+    <span id="submitmsg" class="text-success">Congratulations you have added a player to your Squad</span>
+  <form>
+    <div class ="form-group row">
+      <label for="inputPlayername" class="col-sm col-form-label">Select a player</label>       
+                <div select name = "dropdown" id=inputPlayername>
+                  <select id="choice" onchange="getValue(this);">
+                    <option value = "--" selected>Arsenal Player List</option>
+                    <option value = "Aubameyang" >Aubameyang</option>
+                    <option value = "Lacazette">Lacazette</option>
+                    <option value = "Pepe">Pepe</option>
+                    <option value = "Ozil">Ozil</option>
+                    <option value = "Torreira">Torreira</option>
+                    <option value = "Xhaka">Xhaka</option>
+                    <option value = "Martinelli">Martinelli</option>
+                    <option value = "Guendouzi">Guendouzi</option>
+                    <option value = "Saka">Saka</option>
+                    <option value = "Bellerin">Bellerin</option>
+                    <option value = "Tierney">Tierney</option>
+                    <option value = "Mustafi">Mustafi</option>
+                    <option value = "Luiz">Luiz</option>
+                    <option value = "leno">leno</option>
+                    <option value = "Martinez">Martinez</option>
+                  </select>       
+    </div>
+    </div>
+    <div class="form-group row">
+      <label for="inputPlayerno" class="col-sm-2 col-form-label">Player Number</label>
+      <div class="col-sm-10">
+        <input type="number" class="form-control" id="inputPlayerno">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="inputAttack" class="col-sm-2 col-form-label">Attack Stat</label>
+      <div class="col-sm-10">
+        <div class="slidecontainer">
+          <input type="range" min="1" max="99" value="50" class="slider" id="inputAttack">
+          <p>Value: <span id="stat1"></span></p>
+        </div>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="inputDefence" class="col-sm-2 col-form-label">Defence Stat</label>
+      <div class="col-sm-10">
+        <div class="slidecontainer">
+          <input type="range" min="1" max="99" value="50" class="slider" id="inputDefence">
+          <p>Value: <span id="stat2"></span></p>
+        </div>
+      </div>
+    </div>
+    <a class="link" href="/MemCreateTeam.html">CreateTeam</a>
+    
+    <div class="form-group row">
+      <div class="col-sm-10">
+        <button onclick="SaveStats()" type="submit" class="btn btn-primary">Save</button>
+      </div>
+      <div class="col-sm">
+        <button type="button" onclick="getValue(Selection)" class="btn btn-primary">console.log</button>
+      </div>
+    </div>
+  </form>
+  <script src="create.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" 
+  integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" 
+  integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+  crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" 
+  integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+  crossorigin="anonymous"></script>
+</body>
+<br>
+<br>
+</html>

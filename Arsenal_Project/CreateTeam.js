@@ -61,7 +61,7 @@ function getAll() {
         }
 
         function Update() {
-            console.log("upddddd");
+            
             let playername = document.getElementById("updplayername").value;
             let playerno = document.getElementById("updplayerno").value;
             let Attack = document.getElementById("updAttack").value;

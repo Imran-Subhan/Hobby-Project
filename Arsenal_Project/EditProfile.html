@@ -25,7 +25,8 @@
         </center>
 
         <nav class="navbar navbar-expand-md navbar-dark bg dark">
-            <a class="navbar-brand" href="#">Logo</a>
+            <a class="navbar-brand" href="#">
+                <img alt="Brand" src="/Project-images/Arsenal-logo-crop.jpg"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse"
             data-target="#navbarSupportedContent">
             <span class="navbar-toggler-icon"></span>
@@ -37,14 +38,14 @@
                         <a class="nav-link" href="MemberHome.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="Create.html">Create Player</a>
-                    </li>
+                        <a class="nav-link" href="MemCreate.html">Create</a>
+                        </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="CreateTeam.html">My Arsenal Squad</a>
-                    </li>
+                        <a class="nav-link" href="MemCreateTeam.html">My Arsenal Squad</a>
+                        </li>
                     <li class="nav-item  active">
                         <a class="nav-link" href="EditProfile.html">My Profile</a>
-                    </li>         
+                        </li>
                 </ul>
             </div>
         
@@ -66,9 +67,13 @@
             
           </table>
 
+
+
+          <button type='button' class='btn btn-block btn-info' onclick=openForm(userid)> Update </button>
+
           <div class="form-popup" id="myForm">
             <form class="form-container">
-              <h1>Update Stats</h1>
+              <h1>Update Password</h1>
           
               <label for="userid"> <b>User ID</b></label>
               <input type="text" id="Upduserid" readonly="readonly" name="User ID" required>
@@ -77,7 +82,7 @@
               <input type="text" id="Updusername" readonly="readonly" name="Username" required>
           
               <label for="Password"> <b>Password</b></label>
-              <input type="Number" id="Updpassword" placeholder="Enter Password Stat" name="Password" required>
+              <input type="text" id="Updpassword" placeholder="Enter Password" name="Password" required>
           
               <button type="button" onclick="updateUser(id)" class="btn">Update</button>
               <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
