@@ -1,6 +1,5 @@
-#submitmsg {
-    display: none;
-}
+
+
 form {
     margin-left:25%;
     width: 55%;
@@ -11,7 +10,7 @@ form {
 }
 
 .slidecontainer {
-    margin-top: 40%;
+    margin-top: 20%;
     padding: 1px;
     width: 10px;
     font-weight: 500;
@@ -32,17 +31,4 @@ form {
 
 #label { 
     margin-top: 15%;
-}
-
-.container-fluid {
-    
-}
-
-.container .row {
-    border: 1px solid blue;
-
-}
-
-.container .col-sm {
-    border: 1px solid black;
 }
