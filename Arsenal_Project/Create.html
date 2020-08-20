@@ -59,27 +59,24 @@ form {
                   <li class="nav-item">
                       <a class="nav-link" href="UserReg.html">Become a Member</a>
                       </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="#">contact us</a>
-                  </li>
               </ul>
           </div>
       
       </nav>
   </div>
 
-  <div class="container wireframe">
+  <div class="container-fluid wireframe">
     <div class="row justify-content-center myrow">
         <div class="col-sm">
           <center><h2>The Creation Page</h2></center>
         </div>
     </div>
-    <div class="row justify-content-center myrow">
-      <div class="col-sm">
   <form>
-    <div class ="form-group row">
-      <label for="inputPlayername" class="col-sm col-form-label">Select a player</label>       
-                <div select name = "dropdown" id=inputPlayername>
+    <div class ="row align-items-center" id="form-row1">
+      <div class="col-sm">
+      <label for="inputPlayername" id=label >Select a player</label> 
+      </div>      
+                <div class="col-sm" select name = "dropdown" id=inputPlayername>
                   <select id="choice" onchange="getValue(this);">
                     <option value = "--" selected>Arsenal Player List</option>
                     <option value = "Aubameyang" >Aubameyang</option>
@@ -100,24 +97,24 @@ form {
                   </select>       
     </div>
     </div>
-    <div class="form-group row">
-      <label for="inputPlayerno" class="col-sm-2 col-form-label">Player Number</label>
-      <div class="col-sm-10">
-        <input type="number" class="form-control" id="inputPlayerno">
+    <div class="row align-items-center" id="form-row2">
+      <label for="inputPlayerno" class="col-sm col-form-label">Player Number</label>
+      <div class="col-sm">
+        <input type="number" id="inputPlayerno">
       </div>
     </div>
-    <div class="form-group row">
-      <label for="inputAttack" class="col-sm-2 col-form-label">Attack Stat</label>
-      <div class="col-sm-10">
+    <div class="row align-items-center" id="form-row3">
+      <label for="inputAttack" class="col-sm col-form-label">Attack Stat</label>
+      <div class="col-sm">
         <div class="slidecontainer">
           <input type="range" min="1" max="99" value="50" class="slider" id="inputAttack">
           <p>Value: <span id="stat1"></span></p>
         </div>
       </div>
     </div>
-    <div class="form-group row">
-      <label for="inputDefence" class="col-sm-2 col-form-label">Defence Stat</label>
-      <div class="col-sm-10">
+    <div class="row align-items-center" id="form-row4">
+      <label for="inputDefence" class="col-sm col-form-label">Defence Stat</label>
+      <div class="col-sm">
         <div class="slidecontainer">
           <input type="range" min="1" max="99" value="50" class="slider" id="inputDefence">
           <p>Value: <span id="stat2"></span></p>
@@ -125,19 +122,13 @@ form {
       </div>
     </div>
     
-    <div class="form-group row">
-      <div class="col-sm-10">
-        <button onclick="SaveStats()" type="submit" class="btn btn-primary">Save</button>
+    <div class="row align-items-center" id="form-row5">
+      <div class="col-sm">
+        <center><button onclick="SaveStats()" type="submit" class="btn btn-primary">Save</button></center>
       </div>
     </div>
   </form>
       </div>
-      <div class="col-sm">
-        <img src="Project-images/Arteta.jpg" size="shrink-to-fit">
-        </div>
-        <div class="col-sm">
-
-        </div>   
   <script src="create.js"></script>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" 
   integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"

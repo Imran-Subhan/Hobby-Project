@@ -33,12 +33,3 @@ font-weight: bold;
 height: 60px;
 width:60px;
 }
-.wireframe {
-    border:2px solid green;
-}
-.row {
-    border: 1px solid blue;
-}
-#mycol{
-    border: 1px solid yellow;
-}

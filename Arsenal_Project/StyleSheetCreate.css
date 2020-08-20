@@ -2,14 +2,47 @@
     display: none;
 }
 form {
-    width: 100%;
-    
+    margin-left:25%;
+    width: 55%;
+    background-color: rgba(88, 88, 88, 0.596);
+    border: 3px solid rgb(102, 97, 97);
+    border-radius: 5px;
+
 }
 
 .slidecontainer {
-    margin-top: 20px;
-    margin-left: 30px;
+    margin-top: 40%;
     padding: 1px;
     width: 10px;
     font-weight: 500;
+}
+
+#inputPlayername {
+    margin-top: 30px;
+}
+
+#inputPlayerno {
+
+    width: 30%;
+}
+
+#form-row2 {
+    margin-top: 10%;
+}
+
+#label { 
+    margin-top: 15%;
+}
+
+.container-fluid {
+    
+}
+
+.container .row {
+    border: 1px solid blue;
+
+}
+
+.container .col-sm {
+    border: 1px solid black;
 }
