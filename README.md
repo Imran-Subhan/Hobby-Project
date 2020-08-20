@@ -1,17 +1,7 @@
-
-  <p align="center">
+<p align="center">
     ReadMe For Hobby Project 
     <br />
-    <a href="https://github.com/Imran-Subhan/Hobby-Project"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
-    ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Request Feature</a>
-  </p>
-</p>
+  <a href="https://github.com/Imran-Subhan/Hobby-Project"><strong>Explore the docs »</strong></a>
 
 
 
@@ -37,16 +27,24 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-There are many great README templates available on GitHub, however, I didn't find one that really suit my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need.
+This Project is focused around making a website based on a hobby which consists of a front-end in Visual Code Studio
+and back-end in Spring Tool Suite 4. In my free time I enjoy watching/playing Football and the team that I support is Arsenal FC so I have
+chosen to build my project based on my favourite team Arsenal.
 
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should element DRY principles to the rest of your life :smile:
+My website consists of a back-end that communicates with front-end to implement CRUD functionality in the user login and registration pages
+and also in the create stats and create team pages. 
 
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue.
+Users can access my website to create their player and add to their team with stats and player numbers they have chosen for the Arsenal 
+players. The players that they have created will be shown in a table in the create team page so they can look at the squad they have
+created. The website can easily be edited in the front-end (Arsenal_Project) to include players from any team in the select player name section of the form in the 'Create' page.
 
-A list of commonly used resources that I find helpful are listed in the acknowledgements.
+Users can also register as a member in the 'become a member' page and login in the 'login' page to gain access to a members branch of the
+website which isn't much different to the main website but features can be added to it to give members more to do. The main differences
+between the members branch and the original is the change in the 'become a member' navigation tab because there is no need for a member to 
+register again. I have decided to replace 'become a member' with an 'my profile' tab to allow members to see they're user id, username and
+password and they can also update their password or delete their account. I have also added a 'sign out' button to replace the login button
+on the homepage. 
+
 
 ### Built With
 This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
