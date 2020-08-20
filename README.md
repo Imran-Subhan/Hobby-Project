@@ -43,8 +43,8 @@ on the homepage.
 This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 * [Bootstrap](https://getbootstrap.com)
 * [JQuery](https://jquery.com)
-* [AJAX] (https://cdnjs.cloudflare.com/ajax/)
-* [W3schools] (https://www.w3schools.com)
+* [AJAX](https://cdnjs.cloudflare.com/ajax/)
+* [W3schools](https://www.w3schools.com)
 * [springframework]
 
 
