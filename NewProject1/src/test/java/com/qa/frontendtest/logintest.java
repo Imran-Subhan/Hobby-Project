@@ -60,8 +60,8 @@
 //	        
 //	        target = driver.findElementByXPath("//*[@id=\"PasswordInp\"]");
 //	        target.sendKeys("passer");
+//	        Thread.sleep(1000);
 //	        driver.findElementByXPath("/html/body/div/form/div[2]/div[1]/button").click();
-//	        
 //	        Thread.sleep(2000);
 //	        
 //	        target = driver.findElementByXPath("//*[@id=\"navbarSupportedContent\"]/ul/li[4]/a");
