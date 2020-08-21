@@ -3,18 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Arsenal_HomePage</title>
+    <title>Arsenal_LoginPage</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
             integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
             crossorigin="anonymous">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="StyleSheet" href="StyleSheet.css">
-
+    <link rel="StyleSheet" href="StyleSheetLogin.css">
     <style>
      .form-row {
          padding-top: 100px;
      }  
+
+
     </style>
    
 
@@ -28,7 +30,8 @@
         </center>
 
         <nav class="navbar navbar-expand-md navbar-dark bg dark">
-            <a class="navbar-brand" href="#">Logo</a>
+            <a class="navbar-brand" href="#">
+                <img alt="Brand" src="/Project-images/Arsenal-logo-crop.jpg"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse"
             data-target="#navbarSupportedContent">
             <span class="navbar-toggler-icon"></span>
@@ -37,46 +40,22 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav md-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="login.html">Login</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" href="Home.html">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="Create.html">Create</a>
                         </li>
-                    <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
-                            role="button" data-toggle="dropdown">G.O.A.T Players</a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class ="dropdown-item" href="GOATFWS.html"> Forwards</a>
-                                <a class ="dropdown-item" href="GOATMIDS.html"> Midfielders</a>
-                                <a class ="dropdown-item" href="GOATDEFS.html"> Defenders</a>
-                                <a class ="dropdown-item" href="GOATGKS.html"> Goalkeepers</a>
-                            </div>
-                    </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">contact us</a>
-                    </li>
+                        <a class="nav-link" href="CreateTeam.html">My Arsenal Squad</a>
+                        </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="UserReg.html">Become a Member</a>
+                        </li>
                 </ul>
             </div>
         
         </nav>
-       
-        <!-- <nav class="topnav" id="myTopnav">
-            <ul>
-                
-                <li><a href= "Home.html" class="active">Home</a></li>
-                <li><a href="Create.html">Create</a></li>
-                <li><a href="GOATFWS.html">G.O.A.T <br> Forwards</a></li>
-                <li><a href="GOATMIDS.html">G.O.A.T <br> Midfielders</a></li>
-                <li><a href="GOATDEFS.html">G.O.A.T <br> Defenders</a></li>
-                <li><a href="GOATGKS.html">G.O.A.T <br> Goalkeepers</a></li>
-                    </ul>
-                <li><a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                <li><i class="fa fa-bars"></i>
-                </a>
-        </nav> -->
+
           </div>
         <div class="container wireframe">
             <div class="row justify-content-center myrow">
@@ -84,33 +63,31 @@
                     <center><h2>Login</h2></center>
                 </div>
             </div>
-            <form>
+            <form class="form-container">
                 <div class="form-row">
                   <div class="col-md-6 mb-3">
-                    <label for="validationServer01"></label>
-                    <input type="text" class="form-control is-valid" id="UsernameInp" placeholder="Username" required>
-                    <div class="valid-feedback">
-                      Looks good!
-                    </div>
+                    <label for="Username"></label>
+                    <input type="text" class="form-control" id="UsernameInp" placeholder="Username" maxlength="12" required>
+                    <i class="fa fa-times u_times"></i>
+                    <i class="fa fa-check u_check"></i>
                   </div>
-                  <div class="col-md-6 mb-3">
-                    <label for="validationServer02"></label>
-                    <input type="text" class="form-control is-valid" id="PasswordInp" placeholder="Password" required>
-                    <div class="valid-feedback">
-                      Looks good!
-                    </div>
+                  <div class="col-md-6 mb-3" >
+                    <label for="password"></label>
+                    <input type="text" class="form-control" id="PasswordInp" placeholder="Password" maxlength="12" required>
+                    <i class="fa fa-times p_times"></i>
+                    <i class="fa fa-check p_check"></i>
                   </div>
                 </div>
                 <div class="row2">
                     <div class="col-md-6 mb-3">
-                    <button class="btn btn-primary" onclick="login()" type="submit">Submit form</button>
+                    <button class="btn btn-primary" onclick="login()" type="button">Login</button>
                 </div>
                 <div class="col-md-6 mb-3">
-                    <button class="btn btn-primary" onclick="window.location.href='/UserReg.html';" type="button">Register</button>
+                    <button class="btn btn-primary" onclick="window.location.href='/UserReg.html';" type="button">Become a Member</button>
                 </div>
             </div> 
               </form>
-            
+        <script src="/login.js"></script>    
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" 
             integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
             crossorigin="anonymous"></script>

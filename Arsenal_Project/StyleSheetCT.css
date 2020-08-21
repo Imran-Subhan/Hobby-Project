@@ -66,3 +66,12 @@ body {font-family: Arial, Helvetica, sans-serif;}
 .form-container .btn:hover, .open-button:hover {
   opacity: 1;
 }
+
+.form-container #updplayername {
+  background-color: rgba(85, 85, 85, 0.705);
+
+}
+.form-container #updplayerno {
+  background-color: rgba(85, 85, 85, 0.705);
+
+}

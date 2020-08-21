@@ -4,6 +4,8 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,6 +20,7 @@ import com.qa.Repositories.PlayerRepo;
 import com.qa.Services.PlayerService;
 
 
+
 @CrossOrigin
 @RestController
 public class PController {
@@ -29,28 +32,31 @@ public class PController {
 	PlayerRepo repo;
 	
 	@PostMapping ("/AddPlayer") 
-	public String Addplayer(@RequestBody Player p) {
-	return service.newPlayer(p);
-	}
+	public ResponseEntity<Player> create(@RequestBody Player p) {
+		Player created = this.service.create(p);
+		
+		return new ResponseEntity<Player>(created, HttpStatus.OK);
+}
 	
 	@GetMapping ("/ShowPlayers") 
-	public List<Player> ShowAllPlayers() {
-		return service.ShowallPlayers();
+	public ResponseEntity<List<Player>> ShowAllPlayers() {
+		List<Player> playerlist = this.service.ShowallPlayers();
 		
-	}
-	
-	@GetMapping ("/Resetstats/{id}") 
-	public String Reset(@PathVariable int id) {
-		return service.UpdatePlayer(id);
-		
-	}
-	@DeleteMapping ("/DeletePlayer/{id}")
-	public String deletePlayer(@PathVariable int id) {
-		return service.DeletePlayer(id);
+		return new ResponseEntity<List<Player>>(playerlist, HttpStatus.OK);
 }
-	@PutMapping ("/UpdatePlayer/{id}")
-	public String updateplayer(@RequestBody Player p, @PathVariable int id) {
-	return service.updateaPlayer(p);
+
+	@DeleteMapping ("/DeletePlayer/{id}")
+	public ResponseEntity<Object> deletePlayer(@PathVariable int id) {
+		 service.DeletePlayer(id);
+		 
+		 return ResponseEntity.noContent().build();
+}
 	
-	}
-	}
+	@PutMapping ("/UpdatePlayer/{id}")
+	public ResponseEntity<Player> updateplayer(@RequestBody Player p, @PathVariable int id) {
+	final Player updatedplayer = service.updateaPlayer(p);
+	
+	return ResponseEntity.ok(updatedplayer);
+}
+	
+}

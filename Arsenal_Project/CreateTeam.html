@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Arsenal_Create</title>
+    <title>Arsenal_Create_Team</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
             integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
             crossorigin="anonymous">
@@ -23,40 +23,31 @@
         </center>
 
         <nav class="navbar navbar-expand-md navbar-dark bg dark">
-            <a class="navbar-brand" href="#">Logo</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse"
-            data-target="#navbarSupportedContent">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-    
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav md-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="Home.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="Create.html">Create</a>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link" href="CreateTeam.html">Your Team</a>
-                            </li>
-                    <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
-                            role="button" data-toggle="dropdown">G.O.A.T Players</a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class ="dropdown-item" href="GOATFWS.html"> Forwards</a>
-                                <a class ="dropdown-item" href="GOATMIDS.html"> Midfielders</a>
-                                <a class ="dropdown-item" href="GOATDEFS.html"> Defenders</a>
-                                <a class ="dropdown-item" href="GOATGKS.html"> Goalkeepers</a>
-                            </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">contact us</a>
-                    </li>
-                </ul>
-            </div>
-        
-        </nav>
+          <a class="navbar-brand" href="#">
+              <img alt="Brand" src="/Project-images/Arsenal-logo-crop.jpg"></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse"
+          data-target="#navbarSupportedContent">
+          <span class="navbar-toggler-icon"></span>
+          </button>
+  
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav md-auto">
+                  <li class="nav-item ">
+                      <a class="nav-link" href="Home.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="Create.html">Create</a>
+                      </li>
+                  <li class="nav-item active">
+                      <a class="nav-link" href="CreateTeam.html">My Arsenal Squad</a>
+                      </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="UserReg.html">Become a Member</a>
+                      </li>
+              </ul>
+          </div>
+      
+      </nav>
   </div>
   
   <h2>The Created Team</h2>
@@ -80,14 +71,14 @@
   
 
 <div class="form-popup" id="myForm">
-  <form action="/action_page.php" class="form-container">
+  <form class="form-container">
     <h1>Update Stats</h1>
 
     <label for="playername"> <b>Player Name</b></label>
-    <input type="text" id="updplayername" placeholder="Enter player name" name="Attack" required>
+    <input type="text" id="updplayername" readonly="readonly" name="Player Name" required>
 
     <label for="playerno"> <b>player number</b></label>
-    <input type="Number" id="updplayerno" placeholder="Enter player number" name="Attack" required>
+    <input type="Number" id="updplayerno" readonly="readonly" name="playerno" required>
 
     <label for="Attack"> <b>Attack</b></label>
     <input type="Number" id="updAttack" placeholder="Enter Attack Stat" name="Attack" required>

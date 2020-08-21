@@ -1,0 +1,37 @@
+.form-container {
+    padding: 1px;
+
+}
+
+#UsernameInp, #PasswordInp {
+
+    padding: 8px;
+    border: 1px solid gray;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.btn {
+    border: 2px solid gray;
+    background-color: rgba(255, 0, 0, 0.418);
+}
+
+.btn:hover { 
+    background-color: red;
+}
+
+.fa {
+    position: absolute;
+    top: 55%;
+    right: 5%;
+    display: none;
+}
+
+.fa-times {
+    color: red 
+}
+
+.fa-check {
+    color: green
+}

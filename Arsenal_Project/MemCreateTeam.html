@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Arsenal_Create</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+            crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="StyleSheet" href="StyleSheet.css">
+    <link rel="StyleSheet" href= "StyleSheetCT.css">
+
+    <style>
+    </style>
+
+</head>
+<body>
+
+        <center>
+    <h1>ARSENAL STATS</h1>
+        </center>
+
+        <nav class="navbar navbar-expand-md navbar-dark bg dark">
+            <a class="navbar-brand" href="#">
+                <img alt="Brand" src="/Project-images/Arsenal-logo-crop.jpg"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav md-auto">
+                    <li class="nav-item ">
+                        <a class="nav-link" href="MemberHome.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="MemCreate.html">Create</a>
+                        </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="MemCreateTeam.html">My Arsenal Squad</a>
+                        </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="EditProfile.html">My Profile</a>
+                        </li>
+                </ul>
+            </div>
+        
+        </nav>
+  </div>
+  
+  <h2>The Created Team</h2>
+
+  <table class="table table-dark">
+    <thead>
+      <tr>
+        <th scope="col">Player Name</th>
+        <th scope="col">Player Number</th>
+        <th scope="col">Attack</th>
+        <th scope="col">Defence</th>
+
+      </tr>
+    </thead>
+    <tbody id="tbody">
+     
+    </tbody>
+    
+  </table>
+
+  
+
+<div class="form-popup" id="myForm">
+  <form class="form-container">
+    <h1>Update Stats</h1>
+
+    <label for="playername"> <b>Player Name</b></label>
+    <input type="text" id="updplayername" readonly="readonly" name="Player Name" required>
+
+    <label for="playerno"> <b>player number</b></label>
+    <input type="Number" id="updplayerno" readonly="readonly" name="playerno" required>
+
+    <label for="Attack"> <b>Attack</b></label>
+    <input type="Number" id="updAttack" placeholder="Enter Attack Stat" name="Attack" required>
+
+    <label for="Defence"><b>Defence</b></label>
+    <input type="number" id="updDefence" placeholder="Enter Defence Stat" name="Defence" required>
+
+    <button type="button" onclick="Update()" class="btn">Update</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+
+  <script src="CreateTeam.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" 
+  integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" 
+  integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+  crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" 
+  integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+  crossorigin="anonymous"></script>
+</body>
+<br>
+<br>
+</html>
